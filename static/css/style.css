@@ -20,6 +20,7 @@
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
+    background-image: url("../assets/post.png");
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
