@@ -24,8 +24,8 @@ class Post(models.Model):
         return self.title
 
 
-#password = Django@2002.com
-#password = Django@2002.com
+#Django@2002.com
+#Fono2002.com
 #venv\Scripts\activate.bat
 
 #tranlation :
