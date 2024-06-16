@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('',views.getPosts,name = "getPosts"),
@@ -8,3 +9,5 @@ urlpatterns = [
     path('abaout',views.getAbaoutpage,name = "getAbaoutpage"),
     path('<slug>',views.getPost,name = "getPost"),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
