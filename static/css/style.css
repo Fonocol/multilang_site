@@ -1,0 +1,411 @@
+/* Fichier CSS : static/css/style.css */
+
+
+:root{
+    --black: #1c1c1c;
+    --gray: #7e7e7e;
+    --gray-light: #e4e4e4;
+    --red: #b30000;
+    --blue: #1f69d8;
+    --green: rgb(0, 252, 96);
+    --pink: #d4d2d3e0;
+    --fond-size-base: 1rem;
+    --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+    --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --border-radius: 10px;
+}
+
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête de la page */
+header.py-5.bg-light.border-bottom.mb-4 {
+    padding: 2.5rem 0;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1.5rem;
+}
+
+header .text-center {
+    margin-bottom: 2rem;
+}
+
+header h1.fw-bolder {
+    font-size: 2.5rem;
+    color: #343a40;
+}
+
+header p.lead.mb-0 {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Style des cartes de blog */
+.card.mb-4 {
+    margin-bottom: 1.5rem;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card .card-body {
+    padding: 1.5rem;
+}
+
+.card .card-title {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+.card .card-text {
+    color: #495057;
+}
+
+.small text-muted{
+  text-decoration: none;
+  color: #333;
+}
+
+.btn.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 2rem;
+}
+
+.pagination .page-link {
+    color: #007bff;
+}
+
+.pagination .page-link:hover {
+    color: #0056b3;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Recherche et widget d'information */
+.card-header {
+    background-color: #343a40;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+
+.card-body {
+    background-color: #fff;
+}
+
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn.btn-primary {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Footer */
+footer.footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+
+/**other*/
+/* Fichier CSS : static/css/style.css */
+
+/* Style global pour la mise en page des cartes de blog */
+.blog-post {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post .row {
+    display: flex;
+    align-items: stretch;
+}
+
+.blog-post .col-md-4 {
+    flex: 0 0 auto;
+    max-width: 33.333333%;
+}
+
+.blog-post .col-md-8 {
+    flex: 1;
+    padding: 1rem;
+}
+
+.blog-post .card-img-left {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.blog-post .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-post .card-title {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+.blog-post .card-text {
+    color: #495057;
+}
+
+.blog-post .btn-primary {
+    background-color: #007bff;
+    border: none;
+    align-self: flex-start;
+}
+
+.blog-post .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+/* chat bot*/
+#chat-container {
+    /*background-color: var(--blue);*/
+    background-color: rgba(55, 0, 255, 0.315);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 972px;
+    overflow: hidden;/* Pour que le conteneur s'adapte à la hauteur des éléments flottants */
+}
+#chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+   
+}
+
+.message {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+     word-wrap: break-word;
+}
+.user .message {
+    background-color: #f0f0f0;
+    text-align: right;
+}
+.bot .message {
+    background-color: #e0f5ff;
+    text-align: left;
+}
+#user-input {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0); /* Couleur de fond avec une transparence de 50% */
+}
+
+#message-input {
+    flex: 1;
+    margin-right: 5px;
+}
+#send-button {
+    height: 50px;
+    margin-right: 0px;
+    width: 50px;
+}
+
+
+.messageAndElement-zoneuser {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: flex-start;
+    margin-left: 30px;
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 5px;*/
+    padding: 0 10px;
+    /*margin: left;*/
+    /*background-color: none;*/
+    /*box-shadow: 0 0 10px var(--gray);*/
+    margin-bottom: 20px;
+    /*text-align: left;*/
+    float: left; /* Alignement à gauche pour les messages de l'utilisateur */
+    clear: both; /* Pour éviter que les éléments flottants ne se superposent */
+    /* Autres styles personnalisés */
+}
+
+
+
+.messageAndElement-zonechat {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: flex-start;
+    margin-right: 30px;
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 5px;*/
+    padding: 0 10px;
+    /*margin: right;*/
+    /*background-color: none;*/
+    /*box-shadow: 0 0 10px var(--gray);*/
+    margin-bottom: 20px;
+    /*text-align: right;*/
+    float: right; /* Alignement à droite pour les messages du chatbot */
+    clear: both; /* Pour éviter que les éléments flottants ne se superposent */
+    /* Autres styles personnalisés */
+}
+
+
+.message-zoneuser {
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: left;
+    max-width: 300px;
+    background-color: var(--pink);
+    box-shadow: 0 0 10px var(--gray);
+}
+
+
+.message-zonechat {
+    border-radius: 5px;
+    padding:  10px;
+    margin: right;
+    max-width: 300px;
+    background-color: var(--pink);
+    box-shadow: 0 0 10px var(--gray);
+}
+
+/*image de prifile*/
+.bot-image {
+    border-radius: 50%; /* Rendre l'image circulaire en utilisant 50% pour le rayon de la bordure */
+    width: 50px; /* Définir la largeur souhaitée */
+    height: 50px; /* Définir la hauteur souhaitée */
+    object-fit: cover; /* Redimensionner l'image pour couvrir tout le conteneur */
+    filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25)); /* Ajouter une ombre portée */
+}
+
+
+
+/*chat bot popup*/
+.bot-icone {
+    border-radius: 60%; /* Rendre l'image circulaire en utilisant 50% pour le rayon de la bordure */
+    width: 60px; /* Définir la largeur souhaitée */
+    height: 60px; /* Définir la hauteur souhaitée */
+    object-fit: cover; /* Redimensionner l'image pour couvrir tout le conteneur */
+    filter: drop-shadow(0px 44px 34px rgba(241, 95, 222, 0.288)); /* Ajouter une ombre portée */
+}
+.chatbot-link{
+    display: flex;
+    position: fixed;
+    bottom: 5px;
+    right: 50px;
+    z-index: 999;
+}
+
+
+/*contact*/
+.contact-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+}
+
+.contact-link {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%; /* Assurez-vous que l'élément est un cercle */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-link i {
+    font-size: 20px; /* Taille de l'icône */
+}
+
+.contact-link:hover {
+    background-color: var(--pink);
+    color: #000;
+}
+
+
+/*abaout page*/
+
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+
+.image-band {
+    text-align: center;
+}
