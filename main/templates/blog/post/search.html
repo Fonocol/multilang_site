@@ -1,0 +1,25 @@
+{% extends "blog/header.html" %}
+
+
+{% block content %}
+
+{% load static %}
+<div class="container">
+    <img src="{% static 'assets/bot.png' %}" alt="" class="bot-image">
+    <h1>Résultats trouvé pour votre recherche</h1>
+    
+    {% for post in searchResults %}
+    <!-- Affiche les deux premiers posts -->
+    <div class="card mb-4">
+        <h2 class="card-header">{{ post.title }}</h2>
+        <div class="card-body">
+            <div class="small text-muted">{{ post.publish }}</div>
+            <div class="small text-muted">by @{{ post.author }}</div>
+            <p class="card-text">{{ post.body|truncatechars:50 }}</p>
+            <a class="btn btn-primary" href="{% url 'getPost' post.slug %}">Read more</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

@@ -24,6 +24,9 @@ def search(request):
 
     return results
 
+def searchAll(request):
+    searchResults = search(request)
+    return render(request,'blog/post/search.html',{'searchResults':searchResults})
 
 def getPosts(request):
     hometitle = _("Explorations et Innovations du Monde Numérique")
@@ -42,12 +45,14 @@ def getPosts(request):
         posts = paginator.page(paginator.num_pages)
     
     searchResults = search(request)
+    query = request.GET.get('value')
 
     context = {
         'posts':posts,
         'page':page,
         'hometitle':hometitle,
         'searchResults':searchResults,
+        'query':query,
     }
 
     return render(request,'blog/post/blogs.html',context)

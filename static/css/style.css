@@ -21,7 +21,7 @@
 /* Style global */
 body {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    /*color: #333;*/
     background-color: #e9ecef;
     margin: 0;
     padding: 0;
@@ -309,7 +309,7 @@ footer.footer {
     padding:  10px;
     margin: right;
     max-width: 300px;
-    background-color: var(--pink);
+    background-color: white;
     box-shadow: 0 0 10px var(--gray);
 }
 
@@ -318,6 +318,14 @@ footer.footer {
     border-radius: 50%; /* Rendre l'image circulaire en utilisant 50% pour le rayon de la bordure */
     width: 50px; /* Définir la largeur souhaitée */
     height: 50px; /* Définir la hauteur souhaitée */
+    object-fit: cover; /* Redimensionner l'image pour couvrir tout le conteneur */
+    filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25)); /* Ajouter une ombre portée */
+}
+
+.bot-image-search {
+    border-radius: 50%; /* Rendre l'image circulaire en utilisant 50% pour le rayon de la bordure */
+    width: 25px; /* Définir la largeur souhaitée */
+    height: 25px; /* Définir la hauteur souhaitée */
     object-fit: cover; /* Redimensionner l'image pour couvrir tout le conteneur */
     filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25)); /* Ajouter une ombre portée */
 }
@@ -410,4 +418,13 @@ footer.footer {
 
 .image-band {
     text-align: center;
+}
+
+
+/* Ajouter dans ton fichier CSS */
+.animate-pulse {
+    transition: transform 0.2s ease;
+}
+.animate-pulse:hover {
+    transform: scale(1.05);
 }

@@ -46,7 +46,10 @@
                 
                 <div class="card mb-4">
                 <form method="get">
-                    <div class="card-header">Search</div>
+                    <div class="card-header">
+                        <img src="{% static 'assets/bot.png' %}" alt="" class="bot-image-search">
+                        AI Search
+                    </div>
                     <div class="card-body">
                         <div class="input-group">
                             <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" name="value" />
@@ -57,20 +60,29 @@
                 </div>
 
                 
-                    {% for post in searchResults %}
-                             <!-- searchResults-->
-                            <div class="card mb-4">
-				                <h2 class="card-header">{{post.title}}</h2>
-                                <div class="card-body">
-                                    <div class="small text-muted">{{post.publish}}</div>
-                                    <div class="small-text-muted"> by @{{post.author}}</div>
-                                    
-                                    <p class="card-text">{{post.body|truncatechars:50}}</p>
-                                    <a class="btn btn-primary" href="{% url 'getPost' post.slug%}">Read more</a>
-                                </div>
-                            </div>
-                    {% endfor %}  
-                    
+                {% if searchResults %}
+                <p>résultats trouvé pour votre recherche</p>
+                {% for post in searchResults|slice:":2" %}
+                    <!-- Affiche les deux premiers posts -->
+                    <div class="card mb-4">
+                        <h2 class="card-header">{{ post.title }}</h2>
+                        <div class="card-body">
+                            <div class="small text-muted">{{ post.publish }}</div>
+                            <div class="small text-muted">by @{{ post.author }}</div>
+                            <p class="card-text">{{ post.body|truncatechars:50 }}</p>
+                            <a class="btn btn-primary" href="{% url 'getPost' post.slug %}">Read more</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            
+                <!-- Afficher le bouton "Voir tout" si plus de 2 résultats -->
+
+                <a class="animate-pulse" href="{% url 'searchAll' %}?value={{ query }}">
+                    Voir tout<i class="fas fa-arrow-right"></i>
+                </a>
+
+                {% endif %}
+            
 
 
                 <!--gaouche sur pc-->

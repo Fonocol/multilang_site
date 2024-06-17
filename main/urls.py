@@ -7,6 +7,7 @@ urlpatterns = [
     path('chatbat',views.getChatbot,name = "getChatbot"),
     path('chatbot', views.chatbot_response, name='chatbot_response'),
     path('abaout',views.getAbaoutpage,name = "getAbaoutpage"),
+    path('search',views.searchAll,name = "searchAll"),
     path('<slug>',views.getPost,name = "getPost"),
 ]
 
