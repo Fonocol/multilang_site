@@ -11,13 +11,25 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 
+
+
 # Create your views here.
+
+def search(request):
+    query = request.GET.get('value')
+
+    results = []
+    if query:
+        results = Post.objects.filter(title__icontains=query) | Post.objects.filter(body__icontains=query)
+
+    return results
+
 
 def getPosts(request):
     hometitle = _("Explorations et Innovations du Monde Numérique")
     posts_list = Post.objects.all()
     
-    paginator = Paginator(posts_list,2)
+    paginator = Paginator(posts_list,6)
     page = request.GET.get('page')
     try:
         # recuperation des donner de la page x = page 
@@ -29,13 +41,18 @@ def getPosts(request):
         # si la page n'est pas existante aller a la page de fin
         posts = paginator.page(paginator.num_pages)
     
+    searchResults = search(request)
+
     context = {
         'posts':posts,
         'page':page,
         'hometitle':hometitle,
+        'searchResults':searchResults,
     }
 
     return render(request,'blog/post/blogs.html',context)
+
+
 
 def getPost(request,slug: str):
     post = get_object_or_404(Post,slug= slug)
@@ -58,3 +75,6 @@ def chatbot_response(request):
         bot_response = "Salut, je suis indisponible pour reponder a : "
 
         return JsonResponse({"response": bot_response})
+    
+
+

@@ -22,14 +22,13 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-				<h2 class="card-header">{{post.title}}</h2>
-                                <!--a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a-->
+				                <h2 class="card-header">{{post.title}}</h2>
                                 <div class="card-body">
                                     <div class="small text-muted">{{post.publish}}</div>
                                     <div class="small-text-muted"> by @{{post.author}}</div>
                                     
                                     <p class="card-text">{{post.body|truncatechars:50}}</p>
-                                    <a class="btn btn-primary" href="{% url 'getPost' post.slug%}">Read more →</a>
+                                    <a class="btn btn-primary" href="{% url 'getPost' post.slug%}">Read more</a>
                                 </div>
                             </div>
                             
@@ -41,20 +40,41 @@
                 {% include 'blog/layout/pagination.html' with page=posts %}
             </div>
 
-            <!-- Side widgets-->
+            <!--gaouche sur pc-->
             <div class="col-lg-4">
-                <!-- Search widget-->
+                <!-- Search -->
+                
                 <div class="card mb-4">
+                <form method="get">
                     <div class="card-header">Search</div>
                     <div class="card-body">
                         <div class="input-group">
-                            <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                            <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" name="value" />
+                            <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
                         </div>
                     </div>
+                </form>
                 </div>
-                <!-- Categories widget-->
-                <!-- Side widget-->
+
+                
+                    {% for post in searchResults %}
+                             <!-- searchResults-->
+                            <div class="card mb-4">
+				                <h2 class="card-header">{{post.title}}</h2>
+                                <div class="card-body">
+                                    <div class="small text-muted">{{post.publish}}</div>
+                                    <div class="small-text-muted"> by @{{post.author}}</div>
+                                    
+                                    <p class="card-text">{{post.body|truncatechars:50}}</p>
+                                    <a class="btn btn-primary" href="{% url 'getPost' post.slug%}">Read more</a>
+                                </div>
+                            </div>
+                    {% endfor %}  
+                    
+
+
+                <!--gaouche sur pc-->
+                <!-- abaout-->
                 <div class="card mb-4">
                     <div class="card-header">Abaout Us</div>
                     <div class="card-body">Fono colince actuellement etudiant en bac + 3 informatique a l'EILCO et admis en alternance a EFREI</div>
