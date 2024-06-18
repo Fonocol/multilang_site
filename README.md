@@ -17,7 +17,7 @@ Le projet a été déployé sur Render.com et peut être consulté à l'adresse 
   - [Modèles et Vue de Base](#2-modèles-et-vue-de-base)
   - [Internationalisation](#3-internationalisation)
   - [Interface Utilisateur](#4-interface-utilisateur)
-  - [Utilisation de Modèles de Langage (LLM) et RAG](#5-utilisation-de-modèles-de-langage-llm-et-rag-optionnel)
+  - [Utilisation de Modèles de Langage (LLM)](#5-utilisation-de-modèles-de-langage-llm-et-rag-optionnel)
   - [Documentation](#6-documentation)
 - [Exécution du Projet](#exécution-du-projet)
 - [Ressources Utilisées](#ressources-utilisées)
@@ -51,10 +51,10 @@ La réalisation de ce projet s'est étendue sur une période de 5 jours. Chaque 
 - Développement de templates pour l'affichage des articles de blog selon la langue choisie.
 - Ajout d'une fonctionnalité permettant aux utilisateurs de changer la langue de l'interface.
 
-### 5. Utilisation de Modèles de Langage (LLM) et RAG (optionnel)
+### 5. Utilisation de Modèles de Langage (LLM)
 
 - Intégration d'un chatbot basé sur un modèle de langage (GPT) pour répondre aux questions des utilisateurs.
-- Mise en place d'une fonctionnalité de recherche augmentée par intelligence artificielle (RAG).
+- Mise en place d'une fonctionnalité de recherche augmentée.
 
 ### 6. Documentation
 
@@ -94,7 +94,7 @@ python manage.py runserver
 # Ouvrez votre navigateur web et accédez à :
 http://127.0.0.1:8000/
 
-
+```
 
 ## Ressources Utilisées
 
@@ -116,5 +116,5 @@ Pour la réalisation de ce projet, plusieurs ressources ont été utilisées afi
 
 Ces ressources ont été cruciales pour surmonter les défis techniques et réussir à mener à bien ce projet.
 
-
+[Consulter le déploiement du projet](https://test-technique-fono-colince.onrender.com/)
 
