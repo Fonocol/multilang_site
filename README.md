@@ -2,10 +2,30 @@
 
 Ce projet est développé dans le cadre du test technique pour une alternance chez Diot-Siaci. L'objectif est de créer un site Django simple et multilingue, avec la possibilité d'intégrer des modèles de langage (LLM) pour des fonctionnalités de chatbot et de recherche augmentée par intelligence artificielle (RAG).
 
+## Lien de Déploiement
+
+Le projet a été déployé sur Render.com et peut être consulté à l'adresse suivante :
+
+[Consulter le déploiement du projet](https://test-technique-fono-colince.onrender.com/)
+
+
+## Sommaire
+
+- [Temps Mis pour la Réalisation](#temps-mis-pour-la-réalisation)
+- [Étapes Réalisées](#étapes-réalisées)
+  - [Installation et Configuration de Django](#1-installation-et-configuration-de-django)
+  - [Modèles et Vue de Base](#2-modèles-et-vue-de-base)
+  - [Internationalisation](#3-internationalisation)
+  - [Interface Utilisateur](#4-interface-utilisateur)
+  - [Utilisation de Modèles de Langage (LLM) et RAG](#5-utilisation-de-modèles-de-langage-llm-et-rag-optionnel)
+  - [Documentation](#6-documentation)
+- [Exécution du Projet](#exécution-du-projet)
+- [Ressources Utilisées](#ressources-utilisées)
+- [Lien de Déploiement](#lien-de-déploiement)
+
 ## Temps Mis pour la Réalisation
 
-La réalisation de ce projet s'est étendue sur une période de 5 jours. Chaque jour a été consacré à différentes étapes clés, allant de la configuration initiale de Django, à l'implémentation des fonctionnalités multilingues, jusqu'à l'intégration  des modèles de langage (LLM) pour les fonctionnalités avancées.
-
+La réalisation de ce projet s'est étendue sur une période de 5 jours. Chaque jour a été consacré à différentes étapes clés, allant de la configuration initiale de Django, à l'implémentation des fonctionnalités multilingues, jusqu'à l'intégration des modèles de langage (LLM) pour les fonctionnalités avancées.
 
 ## Étapes Réalisées
 
@@ -17,13 +37,13 @@ La réalisation de ce projet s'est étendue sur une période de 5 jours. Chaque 
 
 ### 2. Modèles et Vue de Base
 
-- Définition du modèle `Post` pour gérer les articles de blog avec les champs `title`, `body(content)`, et `date de publication`...
+- Définition du modèle `Post` pour gérer les articles de blog avec les champs `title`, `content`, et `publication_date`.
 - Implémentation d'une vue pour afficher une liste d'articles sur le site.
 
 ### 3. Internationalisation
 
 - Configuration du projet pour supporter l'internationalisation (i18n).
-- Ajout des langues française (fr) et anglaise (en) et bien d'autre.
+- Ajout des langues française (fr) et anglaise (en), ainsi que d'autres langues.
 - Traduction des éléments statiques de l'interface utilisateur.
 
 ### 4. Interface Utilisateur
@@ -34,52 +54,46 @@ La réalisation de ce projet s'est étendue sur une période de 5 jours. Chaque 
 ### 5. Utilisation de Modèles de Langage (LLM) et RAG (optionnel)
 
 - Intégration d'un chatbot basé sur un modèle de langage (GPT) pour répondre aux questions des utilisateurs.
-- Mise en place d'une fonctionnalité de recherche augmentée d'articles.
+- Mise en place d'une fonctionnalité de recherche augmentée par intelligence artificielle (RAG).
 
 ### 6. Documentation
 
-- Réalisation d'un fichier README.md détaillant les étapes réalisées et les fonctionnalités du projet.
-- Ajout de commentaires dans le code pour expliquer les parties clés et l'utilisation de chatGPT lorsque applicable.
-
+- Rédaction d'un fichier README.md détaillant les étapes réalisées et les fonctionnalités du projet.
+- Ajout de commentaires dans le code pour expliquer les parties clés et l'utilisation de ChatGPT lorsque applicable.
 
 ## Exécution du Projet
 
 Suivez ces étapes pour installer et exécuter le projet sur votre machine locale :
 
-### 1. Cloner le Repository
-
+```bash
+# 1. Cloner le Repository
 git clone <url_du_repository>
 cd <nom_du_dossier_du_projet>
 
-### 2. Créer un Environnement Virtuel
+# 2. Créer un Environnement Virtuel
+python -m venv env
 
-Créez un environnement virtuel Python pour isoler les dépendances du projet. `python -m venv env`
+# 3. Activer l'Environnement Virtuel
+# Pour Windows :
+env\Scripts\activate.bat
+# Pour Linux ou macOS :
+source env/bin/activate
 
-### 3. Activer l'Environnement Virtuel
-
-`env\Scripts\activate.bat`  au `source env/bin/activate` pour lunix
-
-### 4. Installer les Dépendances
-
-Installez les dépendances nécessaires à partir du fichier requirements.txt.
+# 4. Installer les Dépendances
 pip install -r requirements.txt
 
-### 5. Configurer le Projet
-
-Assurez-vous que l'environnement virtuel est connecté au répertoire du projet multilang_site.
-Changez le répertoire de travail au dossier du projet si ce n'est pas déjà fait.
+# 5. Configurer le Projet
 cd multilang_site
 
-### 6. Appliquer les Migrations
+# 6. Appliquer les Migrations
+python manage.py migrate
 
-Appliquez les migrations pour créer la base de données et les tables nécessaires. python manage.py migrate
+# 7. Exécuter le Serveur de Développement
+python manage.py runserver
 
-### 7. Exécuter le Serveur de Développement
-
-Lancez le serveur de développement pour voir le projet en action. python manage.py runserver
-
-Ouvrez votre navigateur web et accédez à l'adresse suivante pour voir le site en fonctionnement :
+# Ouvrez votre navigateur web et accédez à :
 http://127.0.0.1:8000/
+
 
 
 ## Ressources Utilisées
