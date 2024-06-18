@@ -19,7 +19,6 @@
             <div class="col-lg-8">
                 <div class="row">
                     {% for post in posts %}
-
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
@@ -32,19 +31,14 @@
                                     <a class="btn btn-primary" href="{% url 'getPost' post.slug%}">{% translate "Read more" %}</a>
                                 </div>
                             </div>
-                            
                         </div>
-
                     {% endfor %}  
                 </div>
-
                 {% include 'blog/layout/pagination.html' with page=posts %}
             </div>
-
             <!--gaouche sur pc-->
             <div class="col-lg-4">
                 <!-- Search -->
-                
                 <div class="card mb-4">
                 <form method="get">
                     <div class="card-header">
@@ -59,33 +53,25 @@
                     </div>
                 </form>
                 </div>
-
-                
                 {% if searchResults %}
                 <p>{% translate "Results found for your search" %}</p>
-                {% for post in searchResults|slice:":2" %}
+                {% for post in searchResults|slice:":1" %}
                     <!-- Affiche les deux premiers posts -->
                     <div class="card mb-4">
                         <h2 class="card-header">{{ post.title }}</h2>
                         <div class="card-body">
                             <div class="small text-muted">{{ post.publish }}</div>
                             <div class="small text-muted">by @{{ post.author }}</div>
-                            <p class="card-text">{{ post.body|truncatechars:50 }}</p>
+                            <p class="card-text">{{ post.body|truncatechars:50|safe }}</p>
                             <a class="btn btn-primary" href="{% url 'getPost' post.slug %}">{% translate "Read more" %}</a>
                         </div>
                     </div>
                 {% endfor %}
-            
-                <!-- Afficher le bouton "Voir tout" si plus de 2 résultats -->
-
-                <a class="animate-pulse" href="{% url 'searchAll' %}?value={{ query }}">
-                    {% translate "See All" %}<i class="fas fa-arrow-right"></i>
-                </a>
-
+                    <!-- Afficher le bouton "Voir tout"-->
+                    <a class="animate-pulse" href="{% url 'searchAll' %}?value={{ query }}">
+                        {% translate "See All" %}<i class="fas fa-arrow-right"></i>
+                    </a>
                 {% endif %}
-            
-
-
                 <!--gaouche sur pc-->
                 <!-- abaout-->
                 <div class="card mb-4">
@@ -101,27 +87,6 @@
         <img src="{% static 'assets/bot.png' %}" alt="chatbot" class="bot-icone" >
     </a>
 </div>
-
-<!--div class="container">
-   
-    {% for post in posts %}
-    <div class="post">
-        <h2 class="post-title"></h2>
-            <a href= "{% url 'getPost' post.slug%}"> {{post.title}}</a>
-        </h2>
-        <p class="post-date">{{post.publish}}</p>
-        <div class="post-content">
-            <p>{{post.body}}</p>
-        </div>
-    <button> <a href= "{% url 'getPost' post.slug%}">Read more...</a> </button>
-    </div>
-    {% endfor %}
-
-passeword de dupond user@.com
-</div-->
-
-
-
 {% endblock content %}
 
 

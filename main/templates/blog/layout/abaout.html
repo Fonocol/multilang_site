@@ -8,33 +8,30 @@
         <h2>Who Am I?</h2>
         <p>I am <strong>Fono Colince</strong>, a passionate software engineer currently studying at the Ecole d'Ingénieurs du Littoral-Côte-d‘Opale in France. I have a strong interest in artificial intelligence, data science, and programming languages such as Python, Java, C, and R.</p>
     </section>
-    
     <section class="section contact-section">
         <h2>Contact Me</h2>
         <ul class="contact-list">
             <li><a href="mailto:fonocolince@gmail.com" class="contact-link"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/fonocolince/" class="contact-link"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/fonocolince" class="contact-link"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/fonocolince/" class="contact-link"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/Fonocol" class="contact-link"><i class="fab fa-github"></i></a></li>
             <li><a href="https://www.instagram.com/fonocolince/" class="contact-link"><i class="fab fa-instagram"></i></a></li>
-            <!-- Ajoutez d'autres liens avec les icônes correspondantes ici -->
             <li><a href="https://wa.me/+237659312409" class="contact-link"><i class="fab fa-whatsapp"></i></a></li>
             <li><a href="https://twitter.com/fonocolince" class="contact-link"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://www.facebook.com/?locale=fr_FR" class="contact-link"><i class="fab fa-facebook"></i></a></li>
         </ul>        
     </section>
-    
+    <section class="section about-section">
+        <h2>My CV</h2>
+        <embed src="{% static 'assets/Cv.pdf' %}" type="application/pdf" width="100%" height="600px">
+    </section>
     <section class="section image-band">
         <h2>My Journey</h2>
-        <img src="{% static 'assets/imghero.webp' %}" alt="Computer" class="hero-image" width="981" height="528">
+        <img src="{% static 'assets/imghero.webp' %}" alt="Computer" class="hero-image" width="75%" height="528">
     </section>
-
-    
-
 <div class="chatbot-link" id="linked">
     <a href="/chatbot" >
         <img src="{% static 'assets/bot.png' %}" alt="chatbot" class="bot-icone" >
     </a>
 </div>
 </section>
-
 {% endblock content %}

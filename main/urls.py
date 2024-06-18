@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-
+#router
 urlpatterns = [
     path('', views.getPosts, name="getPosts"),
     path('chatbot/', views.chatbot_response, name='chatbot_response'),

@@ -23,15 +23,11 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', include('main.urls')),
 ]
-
-
 
 urlpatterns += staticfiles_urlpatterns()
 
-
-#utiliser pour les http de la traduction
+#utiliser pour les http:../laguage.code de la traduction
 urlpatterns += i18n_patterns(
     path('',include('main.urls')),
 )
