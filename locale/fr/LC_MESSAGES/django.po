@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-18 02:21+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\main\templates\blog\header.html:24
+msgid "Alternance"
+msgstr "Apprenticeship"
+
+#: .\main\templates\blog\header.html:36
+msgid "Language"
+msgstr "Langue"
+
+
+#: .\main\templates\blog\header.html:39 .\multilang_site\settings.py:125
+msgid "English"
+msgstr "Anglais"
+
+#: .\main\templates\blog\header.html:40 .\multilang_site\settings.py:126
+msgid "French"
+msgstr "Francais"
+
+#: .\main\templates\blog\post\blogs.html:12
+msgid "Technical Test for Apprenticeship DiotSiaci"
+msgstr "Test Technique Alternance chez DiotSiaci"
+
+#: .\main\templates\blog\post\blogs.html:52
+msgid "Let me find for you"
+msgstr "Laissez-moi trouver pour vous"
+
+#: .\main\templates\blog\post\blogs.html:65
+msgid "Results found for your search"
+msgstr "Résultats trouvés pour votre recherche"
+
+#: .\main\templates\blog\post\blogs.html:74
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: .\main\templates\blog\post\blogs.html:82
+msgid "See All"
+msgstr "Voir tout"
+
+#: .\main\templates\blog\post\blogs.html:92
+msgid "Abaout Us"
+msgstr "À propos de nous"
+
+#: .\main\templates\blog\post\blogs.html:93
+msgid ""
+"Fono Colince is currently a third-year computer science student at EILCO and "
+"has been accepted for an apprenticeship at EFREI."
+msgstr ""
+"Fono Colince est actuellement étudiant en informatique en troisième année à "
+"L'EILCO et a été accepté pour une alternance à l'EFREI."
+
+#: .\main\views.py:58
+msgid "Explorations and Innovations in the Digital World"
+msgstr "Explorations et Innovations du Monde Numérique"

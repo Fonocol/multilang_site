@@ -10,26 +10,54 @@ from django.core.paginator import (
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
+# import the OpenAI Python library for calling the OpenAI API
+from openai import OpenAI
+from decouple import config
 
+from django.http import HttpResponse
+
+client = OpenAI(api_key=config('OPENAI_API_KEY'))
 
 
 # Create your views here.
+def augment_search_results(query):
+    
+    MODEL = "gpt-3.5-turbo"
+    # example with a system message
+    response = client.chat.completions.create(
+    model=MODEL,
+    messages=[
+        {"role": "system", "content": "tu est un  assistant qui aide en repondant tres simplement au question brievement."},
+        {"role": "user", "content": query},
+    ],
+    temperature=0,
+    )
+
+    print(response.choices[0].message.content)
+
+    suggestions = response.choices[0].message.content
+    return suggestions
 
 def search(request):
     query = request.GET.get('value')
 
     results = []
+    augmented_results = []
     if query:
         results = Post.objects.filter(title__icontains=query) | Post.objects.filter(body__icontains=query)
+        #augmented_results = augment_search_results(query)
 
-    return results
+    return (results,augmented_results)
+
+
+
 
 def searchAll(request):
-    searchResults = search(request)
+    searchResults = search(request)[0]
     return render(request,'blog/post/search.html',{'searchResults':searchResults})
 
 def getPosts(request):
-    hometitle = _("Explorations et Innovations du Monde Numérique")
+    hometitle = _("Explorations and Innovations in the Digital World")
     posts_list = Post.objects.all()
     
     paginator = Paginator(posts_list,6)
@@ -44,7 +72,7 @@ def getPosts(request):
         # si la page n'est pas existante aller a la page de fin
         posts = paginator.page(paginator.num_pages)
     
-    searchResults = search(request)
+    searchResults = search(request)[0]
     query = request.GET.get('value')
 
     context = {
@@ -77,9 +105,15 @@ def chatbot_response(request):
         user_message = data.get('message')
         
         # Réponse automatique du bot
-        bot_response = "Salut, je suis indisponible pour reponder a : "
+        bot_response = "Salut, je suis indisponible pour repondre :-)"
 
         return JsonResponse({"response": bot_response})
+    
+    # Gérer les requêtes GET ou autres méthodes non-POST
+    elif request.method == 'GET':
+        return getChatbot(request)
+    else:
+        return HttpResponse(status=405)
     
 
 

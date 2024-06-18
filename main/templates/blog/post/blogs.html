@@ -5,10 +5,11 @@
 <!-- blog header -->
 <header class="py-5 bg-light border-bottom mb-4">
     {% load static %}
+    {% load i18n %}
     <div class="container">
         <div class="text-center my-5">
             <h1 class="fw-bolder">{{hometitle}}</h1>
-            <p class="lead mb-0">Test Technique Alternance Home</p>
+            <p class="lead mb-0">{% translate "Technical Test for Apprenticeship DiotSiaci" %}</p>
         </div>
     </div>
     <!-- Page content-->
@@ -28,7 +29,7 @@
                                     <div class="small-text-muted"> by @{{post.author}}</div>
                                     
                                     <p class="card-text">{{post.body|truncatechars:50}}</p>
-                                    <a class="btn btn-primary" href="{% url 'getPost' post.slug%}">Read more</a>
+                                    <a class="btn btn-primary" href="{% url 'getPost' post.slug%}">{% translate "Read more" %}</a>
                                 </div>
                             </div>
                             
@@ -48,7 +49,7 @@
                 <form method="get">
                     <div class="card-header">
                         <img src="{% static 'assets/bot.png' %}" alt="" class="bot-image-search">
-                        AI Search
+                        {% translate "Let me find for you" %}
                     </div>
                     <div class="card-body">
                         <div class="input-group">
@@ -61,7 +62,7 @@
 
                 
                 {% if searchResults %}
-                <p>résultats trouvé pour votre recherche</p>
+                <p>{% translate "Results found for your search" %}</p>
                 {% for post in searchResults|slice:":2" %}
                     <!-- Affiche les deux premiers posts -->
                     <div class="card mb-4">
@@ -70,7 +71,7 @@
                             <div class="small text-muted">{{ post.publish }}</div>
                             <div class="small text-muted">by @{{ post.author }}</div>
                             <p class="card-text">{{ post.body|truncatechars:50 }}</p>
-                            <a class="btn btn-primary" href="{% url 'getPost' post.slug %}">Read more</a>
+                            <a class="btn btn-primary" href="{% url 'getPost' post.slug %}">{% translate "Read more" %}</a>
                         </div>
                     </div>
                 {% endfor %}
@@ -78,7 +79,7 @@
                 <!-- Afficher le bouton "Voir tout" si plus de 2 résultats -->
 
                 <a class="animate-pulse" href="{% url 'searchAll' %}?value={{ query }}">
-                    Voir tout<i class="fas fa-arrow-right"></i>
+                    {% translate "See All" %}<i class="fas fa-arrow-right"></i>
                 </a>
 
                 {% endif %}
@@ -88,8 +89,8 @@
                 <!--gaouche sur pc-->
                 <!-- abaout-->
                 <div class="card mb-4">
-                    <div class="card-header">Abaout Us</div>
-                    <div class="card-body">Fono colince actuellement etudiant en bac + 3 informatique a l'EILCO et admis en alternance a EFREI</div>
+                    <div class="card-header">{% translate "Abaout Us" %}</div>
+                    <div class="card-body">{% translate "Fono Colince is currently a third-year computer science student at EILCO and has been accepted for an apprenticeship at EFREI." %}</div>
                 </div>
             </div>
         </div>

@@ -30,6 +30,8 @@ class Post(models.Model):
 
 #tranlation :
 #python manage.py makemassages
-#
+#python manage.py compilemessages
+#python manage.py compilemessages
+
 #
 #
