@@ -23,7 +23,7 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-				                <h2 class="card-header">{{post.title}}</h2>
+				                <h2 class="card-header">{% translate post.title %} </h2>
                                 <div class="card-body">
                                     <div class="small text-muted">{{post.publish}}</div>
                                     <div class="small-text-muted"> by @{{post.author}}</div>
@@ -97,7 +97,7 @@
     </div>
 </header>
 <div class="chatbot-link" id="linked">
-    <a href="/chatbat" >
+    <a href="/chatbot" >
         <img src="{% static 'assets/bot.png' %}" alt="chatbot" class="bot-icone" >
     </a>
 </div>

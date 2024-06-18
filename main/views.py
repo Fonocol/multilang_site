@@ -32,10 +32,8 @@ def augment_search_results(query):
     ],
     temperature=0,
     )
-
-    print(response.choices[0].message.content)
-
     suggestions = response.choices[0].message.content
+
     return suggestions
 
 def search(request):
@@ -105,9 +103,9 @@ def chatbot_response(request):
         user_message = data.get('message')
         
         # Réponse automatique du bot
-        bot_response = "Salut, je suis indisponible pour repondre :-)"
+        bot_response = augment_search_results(user_message)#"Salut, je suis indisponible pour repondre :-)"
 
-        return JsonResponse({"response": bot_response})
+        return JsonResponse({'response': bot_response})
     
     # Gérer les requêtes GET ou autres méthodes non-POST
     elif request.method == 'GET':

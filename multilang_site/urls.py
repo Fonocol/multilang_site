@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from django.conf.urls.i18n import i18n_patterns
 
@@ -24,6 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', include('main.urls')),
 ]
+
+
+
+urlpatterns += staticfiles_urlpatterns()
+
 
 #utiliser pour les http de la traduction
 urlpatterns += i18n_patterns(

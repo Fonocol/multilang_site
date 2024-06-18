@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-18 02:32+0200\n"
+"POT-Creation-Date: 2024-06-18 15:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,24 +18,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main\templates\blog\header.html:24
-msgid "Alternance"
+#: .\main\models.py:31
+msgid "Draft"
 msgstr ""
 
-#: .\main\templates\blog\header.html:36
+#: .\main\models.py:32
+msgid "Published"
+msgstr ""
+
+#: .\main\models.py:34
+msgid "Title"
+msgstr ""
+
+#: .\main\models.py:36
+msgid "Body"
+msgstr ""
+
+#: .\main\models.py:39
+msgid "Status"
+msgstr ""
+
+#: .\main\models.py:44
+msgid "Post"
+msgstr ""
+
+#: .\main\models.py:45
+msgid "Posts"
+msgstr ""
+
+#: .\main\templates\blog\header.html:26
+msgid "Apprenticeship"
+msgstr ""
+
+#: .\main\templates\blog\header.html:38
 msgid "Language"
 msgstr ""
 
-#: .\main\templates\blog\header.html:39 .\multilang_site\settings.py:125
+#: .\main\templates\blog\header.html:44 .\multilang_site\settings.py:125
 msgid "English"
 msgstr ""
 
-#: .\main\templates\blog\header.html:40 .\multilang_site\settings.py:126
+#: .\main\templates\blog\header.html:45 .\multilang_site\settings.py:126
 msgid "French"
 msgstr ""
 
 #: .\main\templates\blog\post\blogs.html:12
 msgid "Technical Test for Apprenticeship DiotSiaci"
+msgstr ""
+
+#: .\main\templates\blog\post\blogs.html:32
+#: .\main\templates\blog\post\blogs.html:74
+msgid "Read more"
 msgstr ""
 
 #: .\main\templates\blog\post\blogs.html:52
@@ -44,10 +77,6 @@ msgstr ""
 
 #: .\main\templates\blog\post\blogs.html:65
 msgid "Results found for your search"
-msgstr ""
-
-#: .\main\templates\blog\post\blogs.html:74
-msgid "Read more"
 msgstr ""
 
 #: .\main\templates\blog\post\blogs.html:82
@@ -64,6 +93,22 @@ msgid ""
 "has been accepted for an apprenticeship at EFREI."
 msgstr ""
 
-#: .\main\views.py:58
+#: .\main\views.py:60
 msgid "Explorations and Innovations in the Digital World"
+msgstr ""
+
+#: .\multilang_site\settings.py:127
+msgid "Spanish"
+msgstr ""
+
+#: .\multilang_site\settings.py:128
+msgid "Portuguese"
+msgstr ""
+
+#: .\multilang_site\settings.py:129
+msgid "Italian"
+msgstr ""
+
+#: .\multilang_site\settings.py:130
+msgid "German"
 msgstr ""

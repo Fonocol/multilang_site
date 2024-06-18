@@ -124,6 +124,10 @@ LANGUAGE_CODE = 'en-us'
 LANGUAGES= [
     ('en', _('English')),
     ('fr', _('French')),
+    ('es', _('Spanish')),
+    ('pt', _('Portuguese')),
+    ('it', _('Italian')),
+    ('de', _('German')),
 ]
 
 TIME_ZONE = 'UTC'

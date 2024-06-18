@@ -19,6 +19,8 @@
 </head>
 <body>
     <!-- Responsive navbar-->
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/">{% translate "Apprenticeship" %}</a>
@@ -36,8 +38,11 @@
                             {% translate "Language" %}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item" href="/en"><i class="fas fa-flag-usa"></i>{% translate "English" %}</a></li>
-                            <li><a class="dropdown-item" href="/fr"><i class="fas fa-flag-usa"></i>{% translate "French" %}</a></li>
+                            {% for language in languages %}
+                            <li><a class="dropdown-item" href="/{{language.code}}"><i class="fas fa-flag-usa"></i>{{ language.name_local }}</a></li>
+                            {% endfor %}
+                            <!--li><a class="dropdown-item" href="/en"><i class="fas fa-flag-usa"></i>{% translate "English" %}</a></li>
+                            <li><a class="dropdown-item" href="/fr"><i class="fas fa-flag-usa"></i>{% translate "French" %}</a></li-->
                         </ul>
                     </li>
                 </ul>

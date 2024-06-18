@@ -76,13 +76,14 @@
 
 
         function sendMessageToServer(message) {
-            axios.post('/chatbot', { message: message })
+            axios.post('', { message: message })
             .then(response => {
                 // Gérer la réponse du serveur ici
                 console.log(response.data.response);
                 appendMessage("bot", response.data.response);
             })
             .catch(error => {
+                appendMessage("bot", "GPT est indisponible pour repondre actullement 🤖");
                 console.error('Error sending message to server:', error);
             });
         }

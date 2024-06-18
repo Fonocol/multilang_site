@@ -299,7 +299,7 @@ footer.footer {
     padding: 0 10px;
     margin: left;
     max-width: 300px;
-    background-color: var(--pink);
+    background-color:  white;
     box-shadow: 0 0 10px var(--gray);
 }
 
