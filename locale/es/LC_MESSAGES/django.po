@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-18 14:51+0200\n"
+"POT-Creation-Date: 2024-06-20 15:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,76 +19,102 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
 "1 : 2;\n"
 
-#: .\main\models.py:31
+#: .\main\models.py:18
 msgid "Draft"
-msgstr ""
+msgstr "Borrador"
+
+#: .\main\models.py:19
+msgid "Published"
+msgstr "Publicado"
+
+#: .\main\models.py:21
+msgid "Title"
+msgstr "Título"
+
+#: .\main\models.py:23
+msgid "Body"
+msgstr "Cuerpo"
+
+#: .\main\models.py:26
+msgid "Status"
+msgstr "Estado"
+
+#: .\main\models.py:31
+msgid "Post"
+msgstr "Publicación"
 
 #: .\main\models.py:32
-msgid "Published"
-msgstr ""
-
-#: .\main\models.py:34
-msgid "Title"
-msgstr ""
-
-#: .\main\models.py:36
-msgid "Body"
-msgstr ""
-
-#: .\main\models.py:39
-msgid "Status"
-msgstr ""
-
-#: .\main\models.py:44
-msgid "Post"
-msgstr ""
-
-#: .\main\models.py:45
 msgid "Posts"
-msgstr ""
+msgstr "Publicaciones"
 
-#: .\main\templates\blog\header.html:26
+#: .\main\templates\blog\header.html:25
 msgid "Apprenticeship"
 msgstr "Aprendizaje"
 
-#: .\main\templates\blog\header.html:38
+#: .\main\templates\blog\header.html:37
 msgid "Language"
 msgstr "Idioma"
 
-#: .\main\templates\blog\header.html:44 .\multilang_site\settings.py:125
-msgid "English"
-msgstr "Inglés"
+#: .\main\templates\blog\layout\abaout.html:8
+msgid "Who Am I?"
+msgstr "¿Quién soy?"
 
-#: .\main\templates\blog\header.html:45 .\multilang_site\settings.py:126
-msgid "French"
-msgstr "Francés"
+#: .\main\templates\blog\layout\abaout.html:9
+msgid "I am"
+msgstr "Soy"
+
+#: .\main\templates\blog\layout\abaout.html:9
+msgid ""
+", a passionate software engineer currently studying at the Ecole "
+"d'Ingénieurs du Littoral-Côte-d‘Opale in France. I have a strong interest in "
+"artificial intelligence, data science, and programming languages such as "
+"Python, Java, C, and R."
+msgstr ""
+", un apasionado ingeniero de software actualmente estudiando en la Ecole "
+"d'Ingénieurs du Littoral-Côte-d‘Opale en Francia. Tengo un fuerte interés en "
+"inteligencia artificial, ciencia de datos y lenguajes de programación como "
+"Python, Java, C y R."
+
+#: .\main\templates\blog\layout\abaout.html:12
+msgid "Contact Me"
+msgstr "Contáctame"
+
+#: .\main\templates\blog\layout\abaout.html:24
+msgid "My CV"
+msgstr "Mi CV"
+
+#: .\main\templates\blog\layout\abaout.html:28
+msgid "My Journey"
+msgstr "Mi Trayectoria"
 
 #: .\main\templates\blog\post\blogs.html:12
 msgid "Technical Test for Apprenticeship DiotSiaci"
 msgstr "Prueba técnica para el aprendizaje en DiotSiaci"
 
-#: .\main\templates\blog\post\blogs.html:32
-#: .\main\templates\blog\post\blogs.html:74
+#: .\main\templates\blog\post\blogs.html:31
+#: .\main\templates\blog\post\blogs.html:66
+#: .\main\templates\blog\post\search.html:19
 msgid "Read more"
 msgstr "Leer más"
 
-#: .\main\templates\blog\post\blogs.html:52
+#: .\main\templates\blog\post\blogs.html:46
 msgid "Let me find for you"
 msgstr "Déjame encontrarte algo"
 
-#: .\main\templates\blog\post\blogs.html:65
+#: .\main\templates\blog\post\blogs.html:57
+#: .\main\templates\blog\post\search.html:10
 msgid "Results found for your search"
 msgstr "Resultados encontrados para tu búsqueda"
 
-#: .\main\templates\blog\post\blogs.html:82
+#: .\main\templates\blog\post\blogs.html:72
 msgid "See All"
 msgstr "Ver todo"
 
-#: .\main\templates\blog\post\blogs.html:92
+#: .\main\templates\blog\post\blogs.html:78
 msgid "Abaout Us"
 msgstr "Acerca de Nosotros"
 
-#: .\main\templates\blog\post\blogs.html:93
+#: .\main\templates\blog\post\blogs.html:79
 msgid ""
 "Fono Colince is currently a third-year computer science student at EILCO and "
 "has been accepted for an apprenticeship at EFREI."
@@ -96,9 +122,26 @@ msgstr ""
 "Fono Colince actualmente es estudiante de tercer año de ciencias de la "
 "computación en EILCO y ha sido aceptado para un aprendizaje en EFREI."
 
-#: .\main\views.py:60
+#: .\main\views.py:52
 msgid "Explorations and Innovations in the Digital World"
 msgstr "Exploraciones e innovaciones en el mundo digital"
+
+#: .\main\views.py:97
+msgid ""
+"👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou "
+"à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖"
+"✨"
+msgstr ""
+"👋 ¡Hola! Soy AlternanceAI. No dudes en hacerme preguntas o explorar nuestros servicios. "
+"Si necesitas ayuda, ¡estoy aquí para ti! 🤖✨"
+
+#: .\multilang_site\settings.py:125
+msgid "English"
+msgstr "Inglés"
+
+#: .\multilang_site\settings.py:126
+msgid "French"
+msgstr "Francés"
 
 #: .\multilang_site\settings.py:127
 msgid "Spanish"

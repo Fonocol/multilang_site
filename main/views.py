@@ -1,3 +1,4 @@
+from asyncio import streams
 from django.shortcuts import render, get_object_or_404
 from django.utils.translation import gettext as _  #pour la traduction
 from .models import Post
@@ -13,6 +14,8 @@ import json
 # import the OpenAI Python library for calling the OpenAI API
 from openai import OpenAI
 from decouple import config
+
+import ollama  # pour le llm ollama 
 
 from django.http import HttpResponse
 
@@ -91,7 +94,7 @@ def getChatbot(request):
     """
     retourne la page chatbotpage.html qui est la page de chatbot
     """
-    premiermessage= """👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖✨"""
+    premiermessage= _("""👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖✨""")
     return render(request,'blog/chatbotpage/chatbotpage.html',{'premiermessage':premiermessage})
 
 
@@ -114,6 +117,25 @@ def getGPTResponse(query):
 
     return suggestions
 
+
+def ollameResponse(usermessage):
+    stream = ollama.chat(model = 'mistral',messages=[{
+        'role': 'user',
+        'content': usermessage,
+        }],
+        stream = True
+    )
+    for chunk in stream:
+        res = chunk['message']['content']
+    return res
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+#                    Chatbot developper localement: model loading
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 @csrf_exempt  # Désactiver CSRF pour les requêtes POST venant de JavaScript
 def chatbot_response(request):
     if request.method == 'POST':
@@ -123,7 +145,11 @@ def chatbot_response(request):
         # Réponse automatique du bot
         # Ajouter un API key pour GPT
         #bot_response = getGPTResponse(user_message)#"Salut, je suis indisponible pour repondre :-)"
-        bot_response ="bot", "GPT est indisponible pour repondre actullement 🤖"  #reponse alternative 
+        #bot_response = ollameResponse(user_message)
+        bot_response = "GPT est indisponible pour repondre actullement 🤖"  #reponse alternative 
+
+
+        # reponse du chatbot locale
 
         return JsonResponse({'response': bot_response})
     
