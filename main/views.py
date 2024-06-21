@@ -32,7 +32,7 @@ def search(request):
     results = []
     augmented_results = []
     if query:
-        results = Post.objects.filter(title__icontains=query) | Post.objects.filter(body__icontains=query)
+        results = Post.published.filter(title__icontains=query) | Post.published.filter(body__icontains=query)
     return (results,augmented_results)
 
 
