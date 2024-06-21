@@ -1,4 +1,4 @@
-{% extends "blog/header.html" %}
+{% extends "header.html" %}
 
 {% block content %}
 
@@ -9,6 +9,7 @@
     <div class="container">
         <div class="text-center my-5">
             <h1 class="fw-bolder">{{hometitle}}</h1>
+            <p class="lead mb-0">{% translate "Welcome" %} {{ user.username }}</p>
             <p class="lead mb-0">{% translate "Technical Test for Apprenticeship DiotSiaci" %}</p>
         </div>
     </div>
@@ -28,7 +29,7 @@
                                     <div class="small-text-muted"> by @{{post.author}}</div>
                                     
                                     <p class="card-text">{{post.body|truncatechars:50}}</p>
-                                    <a class="btn btn-primary" href="{% url 'getPost' post.slug%}">{% translate "Read more" %}</a>
+                                    <a class="btn btn-primary" href="{{post.get_absolute_url}}">{% translate "Read more" %}</a>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +64,8 @@
                             <div class="small text-muted">{{ post.publish }}</div>
                             <div class="small text-muted">by @{{ post.author }}</div>
                             <p class="card-text">{{ post.body|truncatechars:50|safe }}</p>
-                            <a class="btn btn-primary" href="{% url 'getPost' post.slug %}">{% translate "Read more" %}</a>
+                            <a class="btn btn-primary" href="{{post.get_absolute_url}}">{% translate "Read more" %}</a>
+                            <!--a class="btn btn-primary" href="{% url 'getPost' post.slug %}">{% translate "Read more" %}</a-->
                         </div>
                     </div>
                 {% endfor %}

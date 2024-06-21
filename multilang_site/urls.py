@@ -30,4 +30,5 @@ urlpatterns += staticfiles_urlpatterns()
 #utiliser pour les http:../laguage.code de la traduction
 urlpatterns += i18n_patterns(
     path('',include('main.urls')),
+    path('accounts/',include('utilisateurs.urls')),
 )

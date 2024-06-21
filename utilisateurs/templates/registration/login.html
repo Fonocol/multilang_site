@@ -1,0 +1,33 @@
+{% extends "header.html" %}
+
+{% block content %}
+{% load static %}
+{% load i18n %}
+
+<div class="container px-5 my-5">
+    <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="POST">
+        {% csrf_token %}   <!--protection contre les attaques-->
+        <div class="form-floating mb-3">
+            <input class="form-control" id="usernameId" name="username" type="text" placeholder="User Name" data-sb-validations="required,email" />
+            <label for="emailAddress">Username</label>
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Username is required.</div>
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Username is not valid.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="passwordId" name="password" type="password" placeholder="Your Password" data-sb-validations="required,email" />
+            <label for="message">Password</label>
+            <div class="invalid-feedback" data-sb-feedback="message:required">Password is required.</div>
+        </div>
+
+      
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+
+
+{% endblock content %}

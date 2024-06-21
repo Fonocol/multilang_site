@@ -50,7 +50,7 @@ def searchAll(request):
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 def getPosts(request):
     hometitle = _("Explorations and Innovations in the Digital World")
-    posts_list = Post.objects.all()
+    posts_list = Post.published.all()
     
     paginator = Paginator(posts_list,4)
     page = request.GET.get('page')
@@ -77,8 +77,8 @@ def getPosts(request):
 
     return render(request,'blog/post/blogs.html',context)
 
-def getPost(request,slug: str):
-    post = get_object_or_404(Post,slug= slug)
+def getPost(request,year:int, month:int ,day:int,slug: str):
+    post = get_object_or_404(Post,slug= slug,status="published",publish__year=year,publish__month=month,publish__day=day)
     return render(request,'blog/post/postPage.html',{'post':post})
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ def getChatbot(request):
     """
     retourne la page chatbotpage.html qui est la page de chatbot
     """
-    premiermessage= _("""👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖✨""")
+    premiermessage= """👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖✨"""
     return render(request,'blog/chatbotpage/chatbotpage.html',{'premiermessage':premiermessage})
 
 
@@ -130,10 +130,14 @@ def ollameResponse(usermessage):
     return res
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
-#                    Chatbot developper localement: model loading
+#  --------------- UTILISATIO DU MODEL LOCALE
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
 #----------------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 @csrf_exempt  # Désactiver CSRF pour les requêtes POST venant de JavaScript
@@ -147,9 +151,6 @@ def chatbot_response(request):
         #bot_response = getGPTResponse(user_message)#"Salut, je suis indisponible pour repondre :-)"
         #bot_response = ollameResponse(user_message)
         bot_response = "GPT est indisponible pour repondre actullement 🤖"  #reponse alternative 
-
-
-        # reponse du chatbot locale
 
         return JsonResponse({'response': bot_response})
     
