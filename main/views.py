@@ -15,8 +15,6 @@ import json
 from openai import OpenAI
 from decouple import config
 
-import ollama  # pour le llm ollama 
-
 from django.http import HttpResponse
 
 client = OpenAI(api_key=config('OPENAI_API_KEY'))
@@ -116,18 +114,6 @@ def getGPTResponse(query):
     suggestions = response.choices[0].message.content
 
     return suggestions
-
-
-def ollameResponse(usermessage):
-    stream = ollama.chat(model = 'mistral',messages=[{
-        'role': 'user',
-        'content': usermessage,
-        }],
-        stream = True
-    )
-    for chunk in stream:
-        res = chunk['message']['content']
-    return res
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 #  --------------- UTILISATIO DU MODEL LOCALE
