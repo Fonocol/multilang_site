@@ -34,7 +34,7 @@
                                 {{ user.username }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                                <li><a class="dropdown-item" href="{% url 'registration_view' %}">Register</a></li>
+                                <li><a class="dropdown-item" href="{% url 'add_post' %}">Add Post</a></li>
                                 <li><a class="dropdown-item" href="{% url 'logout_view' %}">Logout</a></li>
                             </ul>
                         {% else %}
@@ -45,13 +45,8 @@
                                 <li><a class="dropdown-item" href="{% url 'registration_view' %}">Register</a></li>
                                 <li><a class="dropdown-item" href="{% url 'login_view' %}">Login</a></li>
                             </ul>
-                        {% endif %}
-                        
-                        
+                        {% endif %} 
                     </li>
-                    <!--li class="nav-item"><a class="nav-link" href="{% url 'login_view' %}">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'login_view' %}">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'logout_view' %}">Logout</a></li-->
                     <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="/chatbot">ChatBot</a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Blog</a></li>

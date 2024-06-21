@@ -7,6 +7,7 @@ urlpatterns = [
     path('chatbot/', views.chatbot_response, name='chatbot_response'),
     path('about/', views.getAbaoutpage, name="getAbaoutpage"),
     path('search/', views.searchAll, name="searchAll"),
+    path('addpost/', views.add_post, name="add_post"),
     path('<int:year>/<int:month>/<int:day>/<slug>/', views.getPost, name="getPost"),
 ]
 

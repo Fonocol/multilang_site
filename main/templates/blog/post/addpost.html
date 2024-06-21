@@ -1,0 +1,48 @@
+{% extends "header.html" %}
+
+
+{% block content %}
+{% load i18n %}
+
+<div class="container px-5 my-5">
+    <section class="section">
+        <h2>{% translate "New Post for" %} {{ user.username }}</h2>
+    </section>
+    <form id="postForm" data-sb-form-api-token="API_TOKEN" method="POST">
+        {% csrf_token %}  <!-- Protection contre les attaques CSRF -->
+
+        <!-- Champ pour le titre -->
+        <div class="form-floating mb-3">
+            {{ form.title }}
+            <label for="{{ form.title.id_for_label }}">Title</label>
+            {% if form.title.errors %}
+                <div class="invalid-feedback" style="display: block;">
+                    {% for error in form.title.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Champ pour le contenu (body) -->
+        <div class="form-floating mb-3">
+            {{ form.body }}
+            <label for="{{ form.body.id_for_label }}">Body</label>
+            {% if form.body.errors %}
+                <div class="invalid-feedback" style="display: block;">
+                    {% for error in form.body.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Bouton de soumission -->
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Add Post</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}

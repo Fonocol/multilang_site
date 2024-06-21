@@ -1,7 +1,8 @@
 from asyncio import streams
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.translation import gettext as _  #pour la traduction
 from .models import Post
+from main.forms import PostForm
 from django.core.paginator import (
     Paginator,
     EmptyPage,
@@ -150,3 +151,14 @@ def chatbot_response(request):
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+def add_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            newForm = form.save(commit=False)
+            newForm.author = request.user
+            newForm.save()
+            return redirect('getPosts')
+    else:
+        form = PostForm()
+        return render(request, 'blog/post/addpost.html',{'form':form})

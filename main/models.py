@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
+from django.utils.text import slugify
 
 # importer la  table User
 from django.contrib.auth.models import User
@@ -46,6 +47,14 @@ class Post(models.Model):
     #urls personnalisable
     def get_absolute_url(self):
         return reverse("getPost", args=[self.publish.year,self.publish.month,self.publish.day,self.slug])
+
+    #creation des slugs a la creation du post  
+    # surchage la methode save  
+    def save(self,*args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super(Post,self).save(*args, **kwargs)
+
 
 
 #Django@2002.com
