@@ -50,10 +50,11 @@ class Post(models.Model):
 
     #creation des slugs a la creation du post  
     # surchage la methode save  
-    def save(self,*args, **kwargs):
+    def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
         super(Post,self).save(*args, **kwargs)
+        print('je suis sur que il ya un probleme')
 
 
 

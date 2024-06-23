@@ -14,7 +14,7 @@
         <!-- Champ pour le titre -->
         <div class="form-floating mb-3">
             {{ form.title }}
-            <label for="{{ form.title.id_for_label }}">Title</label>
+            <label for="{{form.title.id_for_label}}">Title</label>
             {% if form.title.errors %}
                 <div class="invalid-feedback" style="display: block;">
                     {% for error in form.title.errors %}
@@ -27,7 +27,7 @@
         <!-- Champ pour le contenu (body) -->
         <div class="form-floating mb-3">
             {{ form.body }}
-            <label for="{{ form.body.id_for_label }}">Body</label>
+            <label for="{{form.body.id_for_label}}">Body</label>
             {% if form.body.errors %}
                 <div class="invalid-feedback" style="display: block;">
                     {% for error in form.body.errors %}

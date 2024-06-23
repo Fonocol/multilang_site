@@ -1,0 +1,55 @@
+{% extends "header.html" %}
+
+{% block content %}
+{% load static %}
+{% load i18n %}
+
+<div class="container px-5 my-5">
+    <div class="card">
+        <div class="card-header">
+            <h2>{% translate "User Profile" %}</h2>
+        </div>
+        <div class="card-body">
+            <form id="profileForm" data-sb-form-api-token="API_TOKEN" method="POST">
+                {% csrf_token %} <!-- Protection contre les attaques CSRF -->
+
+                <!-- Affichage du Username -->
+                <div class="form-group mb-3">
+                    <label for="username">{% translate "Username" %}</label>
+                    <input type="text" class="form-control-plaintext" id="username" value="{{ user.username }}" readonly>
+                </div>
+
+                <!-- Affichage du First Name -->
+                <div class="form-group mb-3">
+                    <label for="first_name">{% translate "First Name" %}</label>
+                    <input type="text" class="form-control-plaintext" id="first_name" value="{{ user.first_name }}" readonly>
+                </div>
+
+                <!-- Affichage du Last Name -->
+                <div class="form-group mb-3">
+                    <label for="last_name">{% translate "Last Name" %}</label>
+                    <input type="text" class="form-control-plaintext" id="last_name" value="{{ user.last_name }}" readonly>
+                </div>
+
+                <!-- Affichage de l'Email -->
+                <div class="form-group mb-3">
+                    <label for="email">{% translate "Email Address" %}</label>
+                    <input type="email" class="form-control-plaintext" id="email" value="{{ user.email }}" readonly>
+                </div>
+
+                <!-- Section Mot de Passe -->
+                <div class="form-group mb-3">
+                    <label for="password">{% translate "Password" %}</label>
+                    <input type="password" class="form-control-plaintext" id="password" value="********" readonly>
+                </div>
+
+                <!-- Bouton Modifier le Profil (optionnel) -->
+                <div class="form-group mb-3">
+                    <a href="" class="btn btn-primary">{% translate "Edit Profile" %}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

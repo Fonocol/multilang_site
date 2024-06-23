@@ -209,10 +209,10 @@ footer.footer {
 
 /* chat bot*/
 #chat-container {
-    /*background-color: var(--blue);*/
+    /*background-color: var(--blue);
     background-color: rgba(55, 0, 255, 0.315);
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px;*/
     padding: 10px;
     margin: 20px auto;
     max-width: 972px;
