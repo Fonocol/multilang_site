@@ -22,6 +22,10 @@ client = OpenAI(api_key=config('OPENAI_API_KEY'))
 from django.utils.text import slugify
 from django.utils import timezone
 
+
+from difflib import get_close_matches
+import random
+
 # Create your views here.
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -121,8 +125,34 @@ def getGPTResponse(query):
 #  --------------- UTILISATIO DU MODEL LOCALE
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 
+def load_data(file_path: str):
+    with open(file_path,'r') as file:
+        data: dict = json.load(file)
+    return data
+
+def save_data_base(file_path: str, newdata:dict):
+    with open(file_path,'w') as file:
+        json.dump(newdata,file, indent=2)
+
+def find_best_match(user_question:str, questions: list[str]):
+    matches: list = get_close_matches(user_question,questions,n=1,cutoff=0.6)
+    return matches[0] if matches else  None
+
+def get_answer(question:str,data:dict):
+    for q in data['questions']:
+        if q['question'] == question:
+            return q['answer'][random.randint(0,len(q['answer'])-1)]
 
 
+
+def chatbotlocal(user_input):
+    data: dict = load_data('data.json')
+    best_match = find_best_match(user_input, [q['question'] for q in data["questions"]])
+    if best_match:
+        answer: str = get_answer(best_match,data)
+    else:
+        answer: str = "Je ne suis pas sûr de comprendre. 🚀 Pouvez-vous me donner plus de détails ou essayer une autre question?"
+    return answer
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -138,7 +168,8 @@ def chatbot_response(request):
         # Ajouter un API key pour GPT
         #bot_response = getGPTResponse(user_message)#"Salut, je suis indisponible pour repondre :-)"
         #bot_response = ollameResponse(user_message)
-        bot_response = "GPT est indisponible pour repondre actullement 🤖"  #reponse alternative 
+        bot_response = chatbotlocal(user_message)
+        #bot_response = "GPT est indisponible pour repondre actullement 🤖"  #reponse alternative 
 
         return JsonResponse({'response': bot_response})
     

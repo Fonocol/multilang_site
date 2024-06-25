@@ -1,0 +1,116 @@
+{
+  "questions": [
+    {
+      "question": "salut",
+      "answer": ["Salut! ", "Bonjour! Comment ca va aujourd'hui? ", "Hey! Comment puis-je t'aider aujourd'hui? "]
+    },
+    {
+      "question": "bonsoir",
+      "answer": ["Bonsoir! ", "Salut, comment s'est passee ta journee?", "Bonsoir! En quoi puis-je t'aider? "]
+    },
+    {
+      "question": "comment ca va",
+      "answer": ["Je vais bien, merci! Et toi? ", "Tout va bien ici! Comment vas-tu? ", "Je me sens super! Merci de demander. "]
+    },
+    {
+      "question": "qui es-tu",
+      "answer": ["Je suis un chatbot cree pour t'aider! ", "Je suis ton assistant virtuel. Que puis-je faire pour toi? ", "Un simple bot a ton service! "]
+    },
+    {
+      "question": "quelles sont tes fonctionnalites",
+      "answer": ["Je peux repondre a tes questions, te donner des informations et bien plus encore! ", "Je suis ici pour t'aider avec tout ce dont tu as besoin. ", "Je peux t'aider a naviguer sur le site, repondre a des questions generales, et plus encore. "]
+    },
+    {
+      "question": "merci",
+      "answer": ["De rien! ", "Avec plaisir! ", "N'hesite pas si tu as d'autres questions. "]
+    },
+    {
+      "question": "au revoir",
+      "answer": ["Au revoir! ", "A bientôt! ", "Passe une bonne journee! "]
+    },
+    {
+      "question": "quel est ton nom",
+      "answer": ["Je suis simplement ton chatbot! ", "Tu peux m'appeler comme tu veux. ", "Je suis ici pour t'aider, nom ou pas!"]
+    },
+    {
+      "question": "que fais-tu",
+      "answer": ["Je reponds a tes questions et j'essaie de t'aider au mieux! ", "Je suis la pour te rendre service. ", "J'assiste les utilisateurs avec leurs questions et demandes. "]
+    },
+    {
+      "question": "comment puis-je creer un compte",
+      "answer": ["Pour creer un compte, clique sur 'S'inscrire' en haut de la page. ", "Tu peux te creer un compte en suivant le lien 'Inscription' sur notre page d'accueil. ", "C'est facile! Va sur la page d'inscription et suis les instructions. "]
+    },
+    {
+      "question": "comment puis-je me connecter",
+      "answer": ["Pour te connecter, clique sur 'Se connecter' en haut de la page. ", "Va sur la page de connexion et entre tes informations. ", "Connecte-toi en cliquant sur 'Connexion' et en entrant tes identifiants. "]
+    },
+    {
+      "question": "comment ajouter un article",
+      "answer": ["Pour ajouter un article, va dans la section 'Ajouter un Post' après t'être connecte. ", "Connecte-toi, puis clique sur 'Ajouter un Post' dans le menu.", "Va sur la page d'ajout de post et remplis le formulaire pour publier ton article. "]
+    },
+    {
+      "question": "comment consulter mon profil",
+      "answer": ["Pour consulter ton profil, clique sur ton nom d'utilisateur en haut de la page. ", "Va dans la section 'Profil' pour voir ou modifier tes informations. ", "Clique sur ton profil pour voir tes informations et tes posts. "]
+    },
+    {
+      "question": "aide",
+      "answer": ["Comment puis-je t'aider? ", "Dis-moi ce dont tu as besoin. ", "Je suis la pour t'aider. Que puis-je faire pour toi? "]
+    },
+    {
+      "question": "qui est ton createur",
+      "answer": ["J'ai ete cree par une equipe de developpeurs passionnes.", "Mon createur est un groupe de programmeurs talentueux."]
+    },
+    {
+      "question": "quel âge as-tu",
+      "answer": ["Les chatbots n'ont pas d'âge, mais j'existe depuis que vous avez lance cette application.", "Je suis aussi jeune ou aussi vieux que la technologie me le permet."]
+    },
+    {
+      "question": "quelle est la meteo aujourd'hui",
+      "answer": ["Je ne peux pas verifier la meteo, mais vous pouvez consulter votre application meteo preferee.", "Je vous recommande de verifier la meteo sur un site dedie."]
+    },
+    {
+      "question": "que fais-tu",
+      "answer": ["Je suis ici pour vous aider avec vos questions.", "Je reponds a vos questions et essaie de vous fournir des informations utiles."]
+    },
+    {
+      "question": "peux-tu m'aider",
+      "answer": ["Bien sûr! En quoi puis-je vous aider?", "Je suis ici pour vous aider. Que puis-je faire pour vous?"]
+    },
+    {
+      "question": "raconte-moi une blague",
+      "answer": ["Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant? Parce que sinon ils tombent encore dans le bateau!", "Pourquoi est-ce que les chats n'aiment pas le web? Parce qu'ils prefèrent jouer avec des ficelles!"]
+    },
+    {
+      "question": "quel est le sens de la vie",
+      "answer": ["Le sens de la vie est une question philosophique profonde. Chacun doit trouver sa propre reponse.", "Certains disent que le sens de la vie est de trouver son propre chemin et de creer des moments de bonheur."]
+    },
+    {
+      "question": "où es-tu",
+      "answer": ["Je suis dans le cloud, accessible partout où vous avez une connexion Internet.", "Je suis une entite numerique, toujours a portee de clic."]
+    },
+    {
+      "question": "comment ca marche",
+      "answer": ["Je fonctionne grâce a des algorithmes d'intelligence artificielle qui analysent vos questions et tentent de trouver les meilleures reponses.", "Je suis programme pour comprendre vos questions et fournir des reponses basees sur une base de donnees predefinie."]
+    },
+    {
+      "question": "quel est ton langage de programmation",
+      "answer": ["Je suis souvent developpe en Python, mais je peux être cree dans de nombreux autres langages comme JavaScript, Java, ou C++.", "Mon code est ecrit principalement en Python, mais les chatbots peuvent être codes dans divers langages."]
+    },
+    {
+      "question": "qui est le president de la France",
+      "answer": ["Le president actuel de la France est Emmanuel Macron.", "Emmanuel Macron est le president de la France."]
+    },
+    {
+      "question": "peux-tu envoyer un email",
+      "answer": ["Je ne peux pas envoyer d'emails directement, mais je peux vous guider pour le faire.", "Je ne peux pas envoyer d'emails, mais je peux vous expliquer comment le faire."]
+    },
+    {
+      "question": "qu'est-ce que l'intelligence artificielle",
+      "answer": ["L'intelligence artificielle est un domaine de l'informatique qui se concentre sur la creation de systèmes capables de realiser des tâches qui necessitent generalement l'intelligence humaine.", "L'IA est la capacite des machines a apprendre, a comprendre et a prendre des decisions de manière autonome."]
+    },
+    {
+      "question": "qu'est-ce que le machine learning",
+      "answer": ["Le machine learning est un sous-ensemble de l'intelligence artificielle qui permet aux systèmes d'apprendre et de s'ameliorer automatiquement a partir de l'experience sans être explicitement programmes.", "Le machine learning utilise des algorithmes pour analyser des donnees, apprendre de ces donnees et faire des predictions ou des decisions basees sur ce qu'il a appris."]
+    }
+  ]
+}
