@@ -156,17 +156,18 @@ def chatbot_response(request):
 
 def add_post(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST or None, request.FILES or None)
         if form.is_valid():
-            newForm = form.save(commit=False)  # Ne sauvegarde pas encore dans la base de données
+            obj = form.save(commit=False)  # Ne sauvegarde pas encore dans la base de données
             
             # Assigner les valeurs manquantes
-            newForm.author = request.user  # Utilisateur actuellement connecté
-            newForm.slug = slugify(newForm.title)  # Générer le slug à partir du titre
-            newForm.publish = timezone.now()  # Date de publication actuelle
-            newForm.status = 'draft'  # Statut par défaut (ou 'published' selon le besoin)
+            obj.author = request.user  # Utilisateur actuellement connecté
+            obj.slug = slugify(obj.title)  # Générer le slug à partir du titre
+            obj.publish = timezone.now()  # Date de publication actuelle
+            obj.status = 'draft'  # Statut par défaut (ou 'published' selon le besoin)
 
-            newForm.save()  # Maintenant, sauvegarde dans la base de données
+            obj.save()  # Maintenant, sauvegarde dans la base de données
+            print(obj.__dict__)
             return redirect('getPosts')  # Rediriger après la sauvegarde réussie
         else:
             # Affiche les erreurs de validation dans les logs pour le débogage

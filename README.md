@@ -10,7 +10,7 @@ Le projet a été déployé sur Render.com et peut être consulté à l'adresse 
 
 
 ## Sommaire
-
+-[UML](#UML)
 - [Temps Mis pour la Réalisation](#temps-mis-pour-la-réalisation)
 - [Étapes Réalisées](#étapes-réalisées)
   - [Installation et Configuration de Django](#1-installation-et-configuration-de-django)
@@ -23,9 +23,13 @@ Le projet a été déployé sur Render.com et peut être consulté à l'adresse 
 - [Ressources Utilisées](#ressources-utilisées)
 - [Lien de Déploiement](#lien-de-déploiement)
 
+## UML
+
+![uml](static/assets/uml.png)
+
 ## Temps Mis pour la Réalisation
 
-La réalisation de ce projet s'est étendue sur une période de 5 jours. Chaque jour a été consacré à différentes étapes clés, allant de la configuration initiale de Django, à l'implémentation des fonctionnalités multilingues, jusqu'à l'intégration des modèles de langage (LLM) pour les fonctionnalités avancées.
+La réalisation de ce projet s'est étendue sur une période de 10 jours. Chaque jour a été consacré à différentes étapes clés, allant de la configuration initiale de Django, à l'implémentation des fonctionnalités multilingues, jusqu'à l'intégration des modèles de langage (LLM) pour les fonctionnalités avancées.
 
 ## Étapes Réalisées
 
@@ -50,6 +54,20 @@ La réalisation de ce projet s'est étendue sur une période de 5 jours. Chaque 
 
 - Développement de templates pour l'affichage des articles de blog selon la langue choisie.
 - Ajout d'une fonctionnalité permettant aux utilisateurs de changer la langue de l'interface.
+
+#### Nouvelles Fonctionnalités
+
+- `Création de Compte Utilisateur :`
+Les utilisateurs peuvent créer un compte en s'inscrivant avec leur nom, adresse e-mail et mot de passe. L'inscription est simple et sécurisée, et permet aux utilisateurs de gérer leurs informations personnelles et de pers
+
+- `Connexion et Déconnexion :`
+Les utilisateurs inscrits peuvent se connecter à leur compte pour accéder à des fonctionnalités supplémentaires.
+
+- `Ajout de Nouveaux Articles :`
+Une fois connectés, les utilisateurs ont la possibilité d'ajouter de nouveaux articles de blog. Ils peuvent utiliser un formulaire intuitif pour saisir le titre et le contenu de l'article
+
+- `Consultation du Profil Utilisateur :`
+Les utilisateurs peuvent accéder à leur page de profil pour consulter
 
 ### 5. Utilisation de Modèles de Langage (LLM)
 
