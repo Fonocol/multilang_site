@@ -21,6 +21,7 @@ Le projet a été déployé sur Render.com et peut être consulté à l'adresse 
   - [Documentation](#6-documentation)
 - [Exécution du Projet](#exécution-du-projet)
 - [Ressources Utilisées](#ressources-utilisées)
+-[DEMO](#DEMO)
 - [Lien de Déploiement](#lien-de-déploiement)
 
 ## UML
@@ -133,6 +134,10 @@ Pour la réalisation de ce projet, plusieurs ressources ont été utilisées afi
 - **Stack Overflow** : Recherche de solutions à des problèmes techniques spécifiques rencontrés pendant le développement.
 
 Ces ressources ont été cruciales pour surmonter les défis techniques et réussir à mener à bien ce projet.
+
+## DEMO 
+
+![demo](static/assets/demo.png)
 
 [Consulter le déploiement du projet](https://test-technique-fono-colince.onrender.com/)
 
