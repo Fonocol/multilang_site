@@ -24,7 +24,20 @@
             {% endif %}
         </div>
 
-        <!-- Champ pour le contenu (body) -->
+        <!-- Champ pour le titre -->
+        <div class="form-floating mb-3">
+            {{ form.sommary }}
+            <label for="{{form.sommary.id_for_label}}">Sommary</label>
+            {% if form.sommary.errors %}
+                <div class="invalid-feedback" style="display: block;">
+                    {% for error in form.sommary.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Champ pour le contenu (body) --> 
         <div class="form-floating mb-3">
             {{ form.body }}
             <label for="{{form.body.id_for_label}}">Body</label>

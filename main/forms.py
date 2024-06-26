@@ -18,6 +18,20 @@ class PostForm(forms.ModelForm):
         })
     )
 
+    sommary=forms.CharField(
+        label='Sommary',
+        max_length=250,
+        help_text='',
+        required=True,
+        widget=forms.TextInput(attrs={
+            "class": "form-control",
+            "id": "sommary",
+            "type": "text",
+            "placeholder": "Enter the sommary here",
+            "data-sb-validations": "required"
+        })
+    )
+
     body = forms.CharField(
         label='Body',
         help_text='',
@@ -35,5 +49,5 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title','body')
+        fields = ('title','sommary','body')
 

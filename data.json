@@ -1,116 +1,358 @@
 {
   "questions": [
     {
-      "question": "salut",
-      "answer": ["Salut! ", "Bonjour! Comment ca va aujourd'hui? ", "Hey! Comment puis-je t'aider aujourd'hui? "]
+      "question": "Bonjour",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "bonsoir",
-      "answer": ["Bonsoir! ", "Salut, comment s'est passee ta journee?", "Bonsoir! En quoi puis-je t'aider? "]
+      "question": "Salut",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "comment ca va",
-      "answer": ["Je vais bien, merci! Et toi? ", "Tout va bien ici! Comment vas-tu? ", "Je me sens super! Merci de demander. "]
+      "question": "Coucou",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "qui es-tu",
-      "answer": ["Je suis un chatbot cree pour t'aider! ", "Je suis ton assistant virtuel. Que puis-je faire pour toi? ", "Un simple bot a ton service! "]
+      "question": "Hello",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "quelles sont tes fonctionnalites",
-      "answer": ["Je peux repondre a tes questions, te donner des informations et bien plus encore! ", "Je suis ici pour t'aider avec tout ce dont tu as besoin. ", "Je peux t'aider a naviguer sur le site, repondre a des questions generales, et plus encore. "]
+      "question": "Hey",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "merci",
-      "answer": ["De rien! ", "Avec plaisir! ", "N'hesite pas si tu as d'autres questions. "]
+      "question": "Yo",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "au revoir",
-      "answer": ["Au revoir! ", "A bientôt! ", "Passe une bonne journee! "]
+      "question": "Bonjour FonoBot",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "quel est ton nom",
-      "answer": ["Je suis simplement ton chatbot! ", "Tu peux m'appeler comme tu veux. ", "Je suis ici pour t'aider, nom ou pas!"]
+      "question": "Salut Fono",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "que fais-tu",
-      "answer": ["Je reponds a tes questions et j'essaie de t'aider au mieux! ", "Je suis la pour te rendre service. ", "J'assiste les utilisateurs avec leurs questions et demandes. "]
+      "question": "Coucou Fono",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Yo ! Besoin d'aide ?"
+      ]
     },
     {
-      "question": "comment puis-je creer un compte",
-      "answer": ["Pour creer un compte, clique sur 'S'inscrire' en haut de la page. ", "Tu peux te creer un compte en suivant le lien 'Inscription' sur notre page d'accueil. ", "C'est facile! Va sur la page d'inscription et suis les instructions. "]
+      "question": "Désolé",
+      "answer": [
+        "Je m'excuse pour le désagrément. Je vais faire de mon mieux pour rectifier cela.",
+        "Excuse-moi si j'ai commis une erreur. Comment puis-je réparer ?",
+        "Pardon pour l'erreur. Comment puis-je vous aider maintenant ?"
+      ]
     },
     {
-      "question": "comment puis-je me connecter",
-      "answer": ["Pour te connecter, clique sur 'Se connecter' en haut de la page. ", "Va sur la page de connexion et entre tes informations. ", "Connecte-toi en cliquant sur 'Connexion' et en entrant tes identifiants. "]
+      "question": "Excuse-moi",
+      "answer": [
+        "Je m'excuse pour le désagrément. Je vais faire de mon mieux pour rectifier cela.",
+        "Excuse-moi si j'ai commis une erreur. Comment puis-je réparer ?",
+        "Pardon pour l'erreur. Comment puis-je vous aider maintenant ?"
+      ]
     },
     {
-      "question": "comment ajouter un article",
-      "answer": ["Pour ajouter un article, va dans la section 'Ajouter un Post' après t'être connecte. ", "Connecte-toi, puis clique sur 'Ajouter un Post' dans le menu.", "Va sur la page d'ajout de post et remplis le formulaire pour publier ton article. "]
+      "question": "Pardon",
+      "answer": [
+        "Je m'excuse pour le désagrément. Je vais faire de mon mieux pour rectifier cela.",
+        "Excuse-moi si j'ai commis une erreur. Comment puis-je réparer ?",
+        "Pardon pour l'erreur. Comment puis-je vous aider maintenant ?"
+      ]
     },
     {
-      "question": "comment consulter mon profil",
-      "answer": ["Pour consulter ton profil, clique sur ton nom d'utilisateur en haut de la page. ", "Va dans la section 'Profil' pour voir ou modifier tes informations. ", "Clique sur ton profil pour voir tes informations et tes posts. "]
+      "question": "Je regrette",
+      "answer": [
+        "Je m'excuse pour le désagrément. Je vais faire de mon mieux pour rectifier cela.",
+        "Excuse-moi si j'ai commis une erreur. Comment puis-je réparer ?",
+        "Pardon pour l'erreur. Comment puis-je vous aider maintenant ?"
+      ]
     },
     {
-      "question": "aide",
-      "answer": ["Comment puis-je t'aider? ", "Dis-moi ce dont tu as besoin. ", "Je suis la pour t'aider. Que puis-je faire pour toi? "]
+      "question": "J'aurais dû",
+      "answer": [
+        "Je m'excuse pour le désagrément. Je vais faire de mon mieux pour rectifier cela.",
+        "Excuse-moi si j'ai commis une erreur. Comment puis-je réparer ?",
+        "Pardon pour l'erreur. Comment puis-je vous aider maintenant ?"
+      ]
     },
     {
-      "question": "qui est ton createur",
-      "answer": ["J'ai ete cree par une equipe de developpeurs passionnes.", "Mon createur est un groupe de programmeurs talentueux."]
+      "question": "C'est de ma faute",
+      "answer": [
+        "Je m'excuse pour le désagrément. Je vais faire de mon mieux pour rectifier cela.",
+        "Excuse-moi si j'ai commis une erreur. Comment puis-je réparer ?",
+        "Pardon pour l'erreur. Comment puis-je vous aider maintenant ?"
+      ]
     },
     {
-      "question": "quel âge as-tu",
-      "answer": ["Les chatbots n'ont pas d'âge, mais j'existe depuis que vous avez lance cette application.", "Je suis aussi jeune ou aussi vieux que la technologie me le permet."]
+      "question": "S'il vous plaît",
+      "answer": [
+        "Merci pour votre politesse ! Comment puis-je vous aider ?",
+        "Je vous en prie. N'hésitez pas à me poser des questions.",
+        "De rien ! Je suis là pour vous aider.",
+        "Excusez-moi si je suis en retard pour répondre. Comment puis-je vous assister maintenant ?"
+      ]
     },
     {
-      "question": "quelle est la meteo aujourd'hui",
-      "answer": ["Je ne peux pas verifier la meteo, mais vous pouvez consulter votre application meteo preferee.", "Je vous recommande de verifier la meteo sur un site dedie."]
+      "question": "Merci",
+      "answer": [
+        "Merci pour votre politesse ! Comment puis-je vous aider ?",
+        "Je vous en prie. N'hésitez pas à me poser des questions.",
+        "De rien ! Je suis là pour vous aider.",
+        "Excusez-moi si je suis en retard pour répondre. Comment puis-je vous assister maintenant ?"
+      ]
     },
     {
-      "question": "que fais-tu",
-      "answer": ["Je suis ici pour vous aider avec vos questions.", "Je reponds a vos questions et essaie de vous fournir des informations utiles."]
+      "question": "Je vous en prie",
+      "answer": [
+        "Merci pour votre politesse ! Comment puis-je vous aider ?",
+        "Je vous en prie. N'hésitez pas à me poser des questions.",
+        "De rien ! Je suis là pour vous aider.",
+        "Excusez-moi si je suis en retard pour répondre. Comment puis-je vous assister maintenant ?"
+      ]
     },
     {
-      "question": "peux-tu m'aider",
-      "answer": ["Bien sûr! En quoi puis-je vous aider?", "Je suis ici pour vous aider. Que puis-je faire pour vous?"]
+      "question": "De rien",
+      "answer": [
+        "Merci pour votre politesse ! Comment puis-je vous aider ?",
+        "Je vous en prie. N'hésitez pas à me poser des questions.",
+        "De rien ! Je suis là pour vous aider.",
+        "Excusez-moi si je suis en retard pour répondre. Comment puis-je vous assister maintenant ?"
+      ]
     },
     {
-      "question": "raconte-moi une blague",
-      "answer": ["Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant? Parce que sinon ils tombent encore dans le bateau!", "Pourquoi est-ce que les chats n'aiment pas le web? Parce qu'ils prefèrent jouer avec des ficelles!"]
+      "question": "Excusez-moi",
+      "answer": [
+        "Merci pour votre politesse ! Comment puis-je vous aider ?",
+        "Je vous en prie. N'hésitez pas à me poser des questions.",
+        "De rien ! Je suis là pour vous aider.",
+        "Excusez-moi si je suis en retard pour répondre. Comment puis-je vous assister maintenant ?"
+      ]
     },
     {
-      "question": "quel est le sens de la vie",
-      "answer": ["Le sens de la vie est une question philosophique profonde. Chacun doit trouver sa propre reponse.", "Certains disent que le sens de la vie est de trouver son propre chemin et de creer des moments de bonheur."]
+      "question": "Pardon de vous déranger",
+      "answer": [
+        "Merci pour votre politesse ! Comment puis-je vous aider ?",
+        "Je vous en prie. N'hésitez pas à me poser des questions.",
+        "De rien ! Je suis là pour vous aider.",
+        "Excusez-moi si je suis en retard pour répondre. Comment puis-je vous assister maintenant ?"
+      ]
     },
     {
-      "question": "où es-tu",
-      "answer": ["Je suis dans le cloud, accessible partout où vous avez une connexion Internet.", "Je suis une entite numerique, toujours a portee de clic."]
+      "question": "Quelle est la formation de Fono Colince ?",
+      "answer": [
+        "Fono Colince est actuellement en première année d'ingénierie informatique à l'Ecole d'Ingénieurs du Littoral-Côte-d'Opale-Calais en France.",
+        "Fono Colince a obtenu une licence en science des Données et intelligence Artificielle (SDIA) à l'Ecole Nationale Supérieure Polytechnique-Douala au Cameroun."
+      ]
     },
     {
-      "question": "comment ca marche",
-      "answer": ["Je fonctionne grâce a des algorithmes d'intelligence artificielle qui analysent vos questions et tentent de trouver les meilleures reponses.", "Je suis programme pour comprendre vos questions et fournir des reponses basees sur une base de donnees predefinie."]
+      "question": "Où Fono Colince a-t-il étudié ?",
+      "answer": [
+        "Fono Colince est actuellement en première année d'ingénierie informatique à l'Ecole d'Ingénieurs du Littoral-Côte-d'Opale-Calais en France.",
+        "Fono Colince a obtenu une licence en science des Données et intelligence Artificielle (SDIA) à l'Ecole Nationale Supérieure Polytechnique-Douala au Cameroun."
+      ]
     },
     {
-      "question": "quel est ton langage de programmation",
-      "answer": ["Je suis souvent developpe en Python, mais je peux être cree dans de nombreux autres langages comme JavaScript, Java, ou C++.", "Mon code est ecrit principalement en Python, mais les chatbots peuvent être codes dans divers langages."]
+      "question": "Quelles sont les études de Fono Colince ?",
+      "answer": [
+        "Fono Colince est actuellement en première année d'ingénierie informatique à l'Ecole d'Ingénieurs du Littoral-Côte-d'Opale-Calais en France.",
+        "Fono Colince a obtenu une licence en science des Données et intelligence Artificielle (SDIA) à l'Ecole Nationale Supérieure Polytechnique-Douala au Cameroun."
+      ]
     },
     {
-      "question": "qui est le president de la France",
-      "answer": ["Le president actuel de la France est Emmanuel Macron.", "Emmanuel Macron est le president de la France."]
+      "question": "Quelle est l'expérience professionnelle de Fono Colince ?",
+      "answer": [
+        "Fono Colince a effectué un stage d'analyse prédictive des données à Orange Digital Center à Douala, Cameroun, ainsi qu'un stage de collecte et analyse des données chez SERM SARL à Douala, Cameroun."
+      ]
     },
     {
-      "question": "peux-tu envoyer un email",
-      "answer": ["Je ne peux pas envoyer d'emails directement, mais je peux vous guider pour le faire.", "Je ne peux pas envoyer d'emails, mais je peux vous expliquer comment le faire."]
+      "question": "Quels sont les stages de Fono Colince ?",
+      "answer": [
+        "Fono Colince a effectué un stage d'analyse prédictive des données à Orange Digital Center à Douala, Cameroun, ainsi qu'un stage de collecte et analyse des données chez SERM SARL à Douala, Cameroun."
+      ]
     },
     {
-      "question": "qu'est-ce que l'intelligence artificielle",
-      "answer": ["L'intelligence artificielle est un domaine de l'informatique qui se concentre sur la creation de systèmes capables de realiser des tâches qui necessitent generalement l'intelligence humaine.", "L'IA est la capacite des machines a apprendre, a comprendre et a prendre des decisions de manière autonome."]
+      "question": "Fono Colince a-t-il une expérience professionnelle ?",
+      "answer": [
+        "Fono Colince a effectué un stage d'analyse prédictive des données à Orange Digital Center à Douala, Cameroun, ainsi qu'un stage de collecte et analyse des données chez SERM SARL à Douala, Cameroun."
+      ]
     },
     {
-      "question": "qu'est-ce que le machine learning",
-      "answer": ["Le machine learning est un sous-ensemble de l'intelligence artificielle qui permet aux systèmes d'apprendre et de s'ameliorer automatiquement a partir de l'experience sans être explicitement programmes.", "Le machine learning utilise des algorithmes pour analyser des donnees, apprendre de ces donnees et faire des predictions ou des decisions basees sur ce qu'il a appris."]
+      "question": "Quels sont les projets réalisés par Fono Colince ?",
+      "answer": [
+        "Fono Colince a réalisé un projet de ChatBot à Douala, Cameroun, qui a remporté le concours National SEFI. Il a également travaillé sur le développement de jeux classiques en langage C."
+      ]
+    },
+    {
+      "question": "Fono Colince a-t-il travaillé sur des projets ?",
+      "answer": [
+        "Fono Colince a réalisé un projet de ChatBot à Douala, Cameroun, qui a remporté le concours National SEFI. Il a également travaillé sur le développement de jeux classiques en langage C."
+      ]
+    },
+    {
+      "question": "Quels sont les projets de Fono Colince ?",
+      "answer": [
+        "Fono Colince a réalisé un projet de ChatBot à Douala, Cameroun, qui a remporté le concours National SEFI. Il a également travaillé sur le développement de jeux classiques en langage C."
+      ]
+    },
+    {
+      "question": "Quelles sont les compétences de Fono Colince ?",
+      "answer": [
+        "Fono Colince maîtrise plusieurs langages de programmation, dont le C, Java, Python, R, MatLab, GdSript, MySQL, Node js, et Mongo BD."
+      ]
+    },
+    {
+      "question": "Quels langages de programmation maîtrise Fono Colince ?",
+      "answer": [
+        "Fono Colince maîtrise plusieurs langages de programmation, dont le C, Java, Python, R, MatLab, GdSript, MySQL, Node js, et Mongo BD."
+      ]
+    },
+    {
+      "question": "Fono Colince a-t-il des compétences en informatique ?",
+      "answer": [
+        "Fono Colince maîtrise plusieurs langages de programmation, dont le C, Java, Python, R, MatLab, GdSript, MySQL, Node js, et Mongo BD."
+      ]
+    },
+    {
+      "question": "Quels sont les centres d'intérêts de Fono Colince ?",
+      "answer": [
+        "Fono Colince est membre bénévole de l'association de la Fondation Etudiante pour la Ville de Calais, donne des cours de mise à niveau aux élèves des lycées de la ville, et est également membre du Club IA de l’école polytechnique."
+      ]
+    },
+    {
+      "question": "Quelles sont les activités que Fono Colince aime faire ?",
+      "answer": [
+        "Fono Colince est membre bénévole de l'association de la Fondation Etudiante pour la Ville de Calais, donne des cours de mise à niveau aux élèves des lycées de la ville, et est également membre du Club IA de l’école polytechnique."
+      ]
+    },
+    {
+      "question": "Fono Colince a-t-il des hobbies ?",
+      "answer": [
+        "Fono Colince est membre bénévole de l'association de la Fondation Etudiante pour la Ville de Calais, donne des cours de mise à niveau aux élèves des lycées de la ville, et est également membre du Club IA de l’école polytechnique."
+      ]
+    },
+    {
+      "question": "Qui est Fono Colince ?",
+      "answer": [
+        "Fono Colince est un étudiant en informatique passionné par l'intelligence artificielle. Il est né en mars 2002 à Bamougoum au Cameroun."
+      ]
+    },
+    {
+      "question": "Peux-tu me parler de Fono Colince ?",
+      "answer": [
+        "Fono Colince est un étudiant en informatique passionné par l'intelligence artificielle. Il est né en mars 2002 à Bamougoum au Cameroun."
+      ]
+    },
+    {
+      "question": "Qui est ce Fono Colince ?",
+      "answer": [
+        "Fono Colince est un étudiant en informatique passionné par l'intelligence artificielle. Il est né en mars 2002 à Bamougoum au Cameroun."
+      ]
+    },
+    {
+      "question": "Comment puis-je contacter Fono Colince ?",
+      "answer": [
+        "Vous pouvez contacter Fono Colince par téléphone au +33 6 59 15 28 04 ou par email à fonocolince@gmail.com."
+      ]
+    },
+    {
+      "question": "Quel est le numéro de téléphone de Fono Colince ?",
+      "answer": [
+        "Vous pouvez contacter Fono Colince par téléphone au +33 6 59 15 28 04 ou par email à fonocolince@gmail.com."
+      ]
+    },
+    {
+      "question": "Quelle est l'adresse email de Fono Colince ?",
+      "answer": [
+        "Vous pouvez contacter Fono Colince par téléphone au +33 6 59 15 28 04 ou par email à fonocolince@gmail.com."
+      ]
+    },
+    {
+      "question": "Quel est le lien GitHub de Fono Colince ?",
+      "answer": [
+        "Le lien vers le GitHub de Fono Colince est https://github.com/Fonocol."
+      ]
+    },
+    {
+      "question": "Peux-tu me donner le lien vers le GitHub de Fono Colince ?",
+      "answer": [
+        "Le lien vers le GitHub de Fono Colince est https://github.com/Fonocol."
+      ]
+    },
+    {
+      "question": "Quel est le profil LinkedIn de Fono Colince ?",
+      "answer": [
+        "Le profil LinkedIn de Fono Colince est disponible à l'adresse www.linkedin.com/in/fono-colince-b3a111273."
+      ]
+    },
+    {
+      "question": "Peux-tu me donner le lien vers le profil LinkedIn de Fono Colince ?",
+      "answer": [
+        "Le profil LinkedIn de Fono Colince est disponible à l'adresse www.linkedin.com/in/fono-colince-b3a111273."
+      ]
     }
   ]
 }

@@ -26,6 +26,7 @@ class Post(models.Model):
     )
     title = models.CharField(max_length=200, verbose_name=_("Title"))
     slug = models.SlugField(max_length=200)
+    sommary = models.CharField(max_length=250, verbose_name=_("Sommary"))
     body = models.TextField(verbose_name=_("Body"))
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

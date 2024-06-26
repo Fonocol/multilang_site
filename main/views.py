@@ -26,27 +26,72 @@ from django.utils import timezone
 from difflib import get_close_matches
 import random
 
+from django.db.models import Q
+
 # Create your views here.
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
+#def search(request):
+#    """
+#    fonction de recherche de post ce basant sur les titre et le body query est la valeur value du formulaire de recherche
+#    """
+#    query = request.GET.get('value')
+#
+#    results = []
+#    augmented_results = []
+#    if query:
+#        results = Post.published.filter(title__icontains=query) | Post.published.filter(sommary__icontains=query) | Post.published.filter(body__icontains=query)
+#    return (results,augmented_results)
+
+
 def search(request):
     """
-    fonction de recherche de post ce basant sur les titre et le body query est la valeur value du formulaire de recherche
+    Fonction de recherche de post se basant sur les titres et le corps. La query est la valeur 'value' du formulaire de recherche.
     """
     query = request.GET.get('value')
 
     results = []
-    augmented_results = []
+
     if query:
-        results = Post.published.filter(title__icontains=query) | Post.published.filter(body__icontains=query)
-    return (results,augmented_results)
+        # Filtrage par pertinence et pondération
+        results = Post.published.filter(
+            Q(title__icontains=query) | 
+            Q(sommary__icontains=query) | 
+            Q(body__icontains=query)
+        )
+
+        # Ajouter un champ de pertinence à chaque post
+        for post in results:
+            relevance_score = 0
+            if query.lower() in post.title.lower():
+                relevance_score += 3  # Priorité plus élevée pour les titres
+            if query.lower() in post.sommary.lower():
+                relevance_score += 2  # Moyenne priorité pour le résumé
+            if query.lower() in post.body.lower():
+                relevance_score += 1  # Priorité plus faible pour le corps
+
+            post.relevance = relevance_score  # Ajout de la pertinence au post
+
+        # Trier par pertinence
+        results = sorted(results, key=lambda post: post.relevance, reverse=True)
+
+        # Compléter avec des résultats approximatifs si aucun résultat exact n'est trouvé
+        if not results:
+            results = Post.published.filter(
+                Q(title__icontains=query[:3]) | 
+                Q(sommary__icontains=query[:3]) | 
+                Q(body__icontains=query[:3])
+            )
+
+    return results
+
 
 
 def searchAll(request):
     """
     retourne search.html qui est la page montrant le resultat complet de la recherche
     """
-    searchResults = search(request)[0]
+    searchResults = search(request)
     return render(request,'blog/post/search.html',{'searchResults':searchResults})
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -68,7 +113,7 @@ def getPosts(request):
         # si la page n'est pas existante aller a la page de fin
         posts = paginator.page(paginator.num_pages)
     
-    searchResults = search(request)[0]
+    searchResults = search(request)
     query = request.GET.get('value')
 
     context = {

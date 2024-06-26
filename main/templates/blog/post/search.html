@@ -15,7 +15,7 @@
         <div class="card-body">
             <div class="small text-muted">{{ post.publish }}</div>
             <div class="small text-muted">by @{{ post.author }}</div>
-            <p class="card-text">{{ post.body|truncatechars:50 }}</p>
+            <p class="card-text">{{ post.sommary|truncatechars:50 }}</p>
             <a class="btn btn-primary" href="{{post.get_absolute_url}}">{% translate "Read more" %}</a>
         </div>
     </div>

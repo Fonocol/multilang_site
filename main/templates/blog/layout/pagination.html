@@ -5,7 +5,7 @@
         {% if page.has_previous %}
             <li class="page-item"><a class="page-link" href="?page={{ page.previous_page_number }}" tabindex="-1" aria-disabled="true">Previous</a></li>
         {% endif %}
-        <li class="page-item active" aria-current="page"><a class="page-link" href="#!">{{ page.number }}</a></li>
+        <li class="page-item" aria-current="page"><a class="page-link" href="#!">{{ page.number }}</a></li>
         
         {% if page.paginator.num_pages != page.number %}
             <li class="page-item"><a class="page-link" href="?page={{ page.number|add:1 }}">{{ page.number|add:1 }}</a></li>
