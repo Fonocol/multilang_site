@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-20 15:52+0200\n"
+"POT-Creation-Date: 2024-06-28 17:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,41 +18,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main\models.py:18
+#: .\main\models.py:24
 msgid "Draft"
 msgstr "Entwurf"
 
-#: .\main\models.py:19
+#: .\main\models.py:25
 msgid "Published"
 msgstr "Veröffentlicht"
 
-#: .\main\models.py:21
+#: .\main\models.py:27
 msgid "Title"
 msgstr "Titel"
 
-#: .\main\models.py:23
+#: .\main\models.py:29
+msgid "Sommary"
+msgstr ""
+
+#: .\main\models.py:30
 msgid "Body"
 msgstr "Inhalt"
 
-#: .\main\models.py:26
+#: .\main\models.py:33
 msgid "Status"
 msgstr "Status"
 
-#: .\main\models.py:31
+#: .\main\models.py:42
 msgid "Post"
 msgstr "Beitrag"
 
-#: .\main\models.py:32
+#: .\main\models.py:43
 msgid "Posts"
 msgstr "Beiträge"
-
-#: .\main\templates\blog\header.html:25
-msgid "Apprenticeship"
-msgstr "Ausbildung"
-
-#: .\main\templates\blog\header.html:37
-msgid "Language"
-msgstr "Sprache"
 
 #: .\main\templates\blog\layout\abaout.html:8
 msgid "Who Am I?"
@@ -86,34 +82,78 @@ msgstr "Mein Lebenslauf"
 msgid "My Journey"
 msgstr "Mein Weg"
 
+#: .\main\templates\blog\layout\pagination.html:7
+msgid "Previous"
+msgstr "Vorherige"
+
+#: .\main\templates\blog\layout\pagination.html:18
+msgid "Next"
+msgstr "Nächste"
+
+#: .\main\templates\blog\layout\profil.html:10
+msgid "User Profile"
+msgstr "Benutzerprofil"
+
+#: .\main\templates\blog\layout\profil.html:18
+msgid "Username"
+msgstr "Benutzername"
+
+#: .\main\templates\blog\layout\profil.html:24
+msgid "First Name"
+msgstr "Vorname"
+
+#: .\main\templates\blog\layout\profil.html:30
+msgid "Last Name"
+msgstr "Nachname"
+
+#: .\main\templates\blog\layout\profil.html:36
+msgid "Email Address"
+msgstr "E-Mail-Adresse"
+
+#: .\main\templates\blog\layout\profil.html:42
+msgid "Password"
+msgstr "Passwort"
+
+#: .\main\templates\blog\layout\profil.html:48
+msgid "Edit Profile"
+msgstr "Profil bearbeiten"
+
+#: .\main\templates\blog\post\addpost.html:9
+msgid "New Post for"
+msgstr "Neuer Beitrag für"
+
 #: .\main\templates\blog\post\blogs.html:12
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: .\main\templates\blog\post\blogs.html:13
 msgid "Technical Test for Apprenticeship DiotSiaci"
 msgstr "Technischer Test für die Ausbildung bei DiotSiaci"
 
-#: .\main\templates\blog\post\blogs.html:31
-#: .\main\templates\blog\post\blogs.html:66
+#: .\main\templates\blog\post\blogs.html:32
+#: .\main\templates\blog\post\blogs.html:67
 #: .\main\templates\blog\post\search.html:19
 msgid "Read more"
 msgstr "Mehr lesen"
 
-#: .\main\templates\blog\post\blogs.html:46
+#: .\main\templates\blog\post\blogs.html:47
 msgid "Let me find for you"
 msgstr "Lass mich für dich finden"
 
-#: .\main\templates\blog\post\blogs.html:57
+#: .\main\templates\blog\post\blogs.html:58
 #: .\main\templates\blog\post\search.html:10
 msgid "Results found for your search"
 msgstr "Ergebnisse für Ihre Suche gefunden"
 
-#: .\main\templates\blog\post\blogs.html:72
+#: .\main\templates\blog\post\blogs.html:73
 msgid "See All"
 msgstr "Alle anzeigen"
 
-#: .\main\templates\blog\post\blogs.html:78
+#: .\main\templates\blog\post\blogs.html:79
 msgid "Abaout Us"
 msgstr "Über uns"
 
-#: .\main\templates\blog\post\blogs.html:79
+#: .\main\templates\blog\post\blogs.html:80
 msgid ""
 "Fono Colince is currently a third-year computer science student at EILCO and "
 "has been accepted for an apprenticeship at EFREI."
@@ -121,40 +161,89 @@ msgstr ""
 "Fono Colince ist derzeit Student im dritten Jahr Informatik an der EILCO und "
 "wurde für eine Ausbildung an der EFREI zugelassen."
 
-#: .\main\views.py:52
+#: .\main\views.py:111
 msgid "Explorations and Innovations in the Digital World"
 msgstr "Erkundungen und Innovationen in der digitalen Welt"
 
-#: .\main\views.py:97
+#: .\main\views.py:156
 msgid ""
-"👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou "
-"à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖"
-"✨"
+"👋 Hello! I am AlternanceAI. Feel free to ask me any questions or explore "
+"our services. If you need help, I'm here for you! 🤖✨"
 msgstr ""
 "👋 Hallo! Ich bin AlternanceAI. Zögern Sie nicht, mir Fragen zu stellen oder "
 "unsere Dienstleistungen zu erkunden. Wenn Sie Hilfe benötigen, stehe ich "
 "Ihnen zur Verfügung! 🤖✨"
 
-#: .\multilang_site\settings.py:125
+#: .\main\views.py:209
+msgid ""
+"I'm not sure I understand. 🚀 Could you give me more details or try another "
+"question?"
+msgstr ""
+"Ich bin mir nicht sicher, ob ich verstehe. 🚀 Können Sie mir mehr Details "
+"geben oder es mit einer anderen Frage versuchen?"
+
+#: .\multilang_site\settings.py:127
 msgid "English"
 msgstr "Englisch"
 
-#: .\multilang_site\settings.py:126
+#: .\multilang_site\settings.py:128
 msgid "French"
 msgstr "Französisch"
 
-#: .\multilang_site\settings.py:127
+#: .\multilang_site\settings.py:129
 msgid "Spanish"
 msgstr "Spanisch"
 
-#: .\multilang_site\settings.py:128
+#: .\multilang_site\settings.py:130
 msgid "Portuguese"
 msgstr "Portugiesisch"
 
-#: .\multilang_site\settings.py:129
+#: .\multilang_site\settings.py:131
 msgid "Italian"
 msgstr "Italienisch"
 
-#: .\multilang_site\settings.py:130
+#: .\multilang_site\settings.py:132
 msgid "German"
 msgstr "Deutsch"
+
+#: .\templates\header.html:25
+msgid "Apprenticeship"
+msgstr "Ausbildung"
+
+#: .\templates\header.html:37
+#, fuzzy
+#| msgid "Post"
+msgid "Add Post"
+msgstr "Beitrag"
+
+#: .\templates\header.html:38
+msgid "Profil"
+msgstr "Profil"
+
+#: .\templates\header.html:39
+msgid "Logout"
+msgstr "Abmelden"
+
+#: .\templates\header.html:43 .\templates\header.html:47
+msgid "Login"
+msgstr "Anmelden"
+
+#: .\templates\header.html:46
+msgid "Register"
+msgstr "Registrieren"
+
+#: .\templates\header.html:51
+msgid "About"
+msgstr "Über uns"
+
+#: .\templates\header.html:52
+msgid "ChatBot"
+msgstr "ChatBot"
+
+#: .\templates\header.html:53
+msgid "Blog"
+msgstr "Blog"
+
+#: .\templates\header.html:57
+msgid "Language"
+msgstr "Sprache"

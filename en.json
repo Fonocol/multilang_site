@@ -1,0 +1,126 @@
+{
+    "questions": [
+      {
+        "question": "hello",
+        "answer": [
+          "Hello! How can I help you today?",
+          "Hi there! What can I do for you?",
+          "Hey! How can I assist you?",
+          "Hello! Need any help?",
+          "Hi! How can I be of service?",
+          "Hey! What do you need help with?"
+        ]
+      },
+      {
+        "question": "how are you",
+        "answer": [
+          "I'm doing great, thank you! How about you?",
+          "I'm fine, thanks for asking! How can I help you?",
+          "I'm here and ready to assist you! How can I help?",
+          "I’m good, thanks! What can I do for you today?",
+          "I'm well, thank you! How can I assist you?",
+          "I'm doing well. How can I help you?"
+        ]
+      },
+      {
+        "question": "what's your name",
+        "answer": [
+          "I’m a chatbot without a specific name, but I’m here to help you!",
+          "You can call me your assistant. How can I help you?",
+          "I don't have a name, but I'm here to assist you.",
+          "I'm an assistant bot here to help. How can I assist?",
+          "I'm just a virtual assistant ready to help you.",
+          "I don't have a name, but I'm here to answer your questions."
+        ]
+      },
+      {
+        "question": "what do you do",
+        "answer": [
+          "I'm here to answer your questions and assist you with any information you need.",
+          "I help by providing answers to your questions and guiding you.",
+          "I'm a virtual assistant designed to help you with information and queries.",
+          "I provide information and help with questions you might have.",
+          "My job is to assist you with any queries you have.",
+          "I'm here to help you with any information you need."
+        ]
+      },
+      {
+        "question": "what is your function",
+        "answer": [
+          "My main function is to assist you by answering your questions.",
+          "I'm here to provide information and help with your questions.",
+          "I'm designed to help you with any queries you have.",
+          "I'm a virtual assistant here to provide answers and assistance.",
+          "I help by answering questions and providing information.",
+          "My role is to assist you with any questions you might have."
+        ]
+      },
+      {
+        "question": "thank you",
+        "answer": [
+          "You're welcome! I'm here to help.",
+          "Glad to help! Let me know if you have more questions.",
+          "You’re welcome! How else can I assist you?",
+          "Happy to help! If you have any other questions, just ask.",
+          "My pleasure! Do you need anything else?",
+          "You're welcome! I'm here if you need anything."
+        ]
+      },
+      {
+        "question": "goodbye",
+        "answer": [
+          "Goodbye! Have a great day!",
+          "See you soon! Take care.",
+          "Bye! Feel free to come back if you have more questions.",
+          "Goodbye and take care!",
+          "Thanks and goodbye!",
+          "See you later! Come back if you need more help."
+        ]
+      },
+      {
+        "question": "what's the weather today",
+        "answer": [
+          "I'm not connected to a weather service, but you can check your weather app for updates.",
+          "I don't have access to the weather right now, but you can find that info online.",
+          "I can't provide weather updates at the moment, sorry.",
+          "I'm not able to give weather forecasts. Try checking a weather website.",
+          "Sorry, I can't provide weather information.",
+          "I'm not programmed to give weather updates. Try a weather site."
+        ]
+      },
+      {
+        "question": "what's your phone number",
+        "answer": [
+          "I don't have a phone number, I'm a chatbot.",
+          "Sorry, I don't have a phone number.",
+          "I'm a virtual assistant, so I don't have a phone number.",
+          "As a chatbot, I don't possess a phone number.",
+          "I don't have a phone number, but I'm here to help you online.",
+          "I don't have a phone number to give you. I'm an assistant bot."
+        ]
+      },
+      {
+        "question": "can you help me with a problem",
+        "answer": [
+          "Sure! What seems to be the issue?",
+          "Of course! Please tell me what the problem is.",
+          "I'd be happy to help. What's the problem?",
+          "Yes, I'm here to assist. What do you need help with?",
+          "I'll do my best to help. What's the problem?",
+          "Sure, I'm here to help. Can you describe the problem?"
+        ]
+      },
+      {
+        "question": "who created you",
+        "answer": [
+          "I was created by developers who designed me to help you.",
+          "I am a product of programmers who built me to assist you.",
+          "I was made by a team of developers to be your virtual assistant.",
+          "Developers created me to help answer your questions.",
+          "I was built by programmers who wanted to make a helpful assistant.",
+          "I am the result of hard work by developers."
+        ]
+      }
+    ]
+  }
+  

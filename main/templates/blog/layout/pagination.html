@@ -1,9 +1,10 @@
 <!-- Pagination-->
 <nav aria-label="Pagination">
+    {% load i18n %}
     <hr class="my-0" />
     <ul class="pagination justify-content-center my-4">
         {% if page.has_previous %}
-            <li class="page-item"><a class="page-link" href="?page={{ page.previous_page_number }}" tabindex="-1" aria-disabled="true">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page.previous_page_number }}" tabindex="-1" aria-disabled="true">{% translate "Previous" %}</a></li>
         {% endif %}
         <li class="page-item" aria-current="page"><a class="page-link" href="#!">{{ page.number }}</a></li>
         
@@ -14,7 +15,7 @@
         {% endif %}
 
         {% if page.has_next %}
-            <li class="page-item"><a class="page-link" href="?page={{ page.next_page_number }}">Next</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page.next_page_number }}">{% translate "Next" %}</a></li>
         {% endif %}
     </ul>
 </nav>

@@ -1,0 +1,126 @@
+{
+    "questions": [
+      {
+        "question": "hallo",
+        "answer": [
+          "Hallo! Wie kann ich Ihnen heute helfen?",
+          "Hi! Was kann ich für Sie tun?",
+          "Hey! Wie kann ich Ihnen behilflich sein?",
+          "Hallo! Brauchen Sie Hilfe?",
+          "Hi! Wie kann ich Ihnen helfen?",
+          "Hallo! Was benötigen Sie?"
+        ]
+      },
+      {
+        "question": "wie geht es dir",
+        "answer": [
+          "Mir geht es gut, danke! Und Ihnen?",
+          "Mir geht es gut, danke der Nachfrage! Wie kann ich helfen?",
+          "Mir geht es gut und ich bin bereit zu helfen! Wie kann ich Ihnen helfen?",
+          "Mir geht es gut, danke! Was kann ich heute für Sie tun?",
+          "Mir geht es gut, danke! Wie kann ich behilflich sein?",
+          "Mir geht es gut. Wie kann ich Ihnen helfen?"
+        ]
+      },
+      {
+        "question": "wie heißt du",
+        "answer": [
+          "Ich bin ein Chatbot ohne bestimmten Namen, aber ich bin hier, um Ihnen zu helfen!",
+          "Sie können mich Ihren Assistenten nennen. Wie kann ich Ihnen helfen?",
+          "Ich habe keinen Namen, aber ich bin hier, um zu helfen.",
+          "Ich bin ein Assistent, der Ihnen helfen kann. Wie kann ich Ihnen helfen?",
+          "Ich bin ein virtueller Assistent und bereit, Ihnen zu helfen.",
+          "Ich habe keinen Namen, aber ich bin hier, um Ihre Fragen zu beantworten."
+        ]
+      },
+      {
+        "question": "was machst du",
+        "answer": [
+          "Ich bin hier, um Ihre Fragen zu beantworten und Ihnen bei allem zu helfen, was Sie brauchen.",
+          "Ich helfe, indem ich Ihre Fragen beantworte und Ihnen Anleitungen gebe.",
+          "Ich bin ein virtueller Assistent, der entwickelt wurde, um Ihnen bei Informationen und Fragen zu helfen.",
+          "Ich bin hier, um Informationen zu liefern und bei Fragen zu helfen.",
+          "Meine Aufgabe ist es, Ihnen bei allen Fragen zu helfen, die Sie haben.",
+          "Ich bin hier, um Ihnen bei jeder Art von Informationen zu helfen, die Sie benötigen."
+        ]
+      },
+      {
+        "question": "was ist deine funktion",
+        "answer": [
+          "Meine Hauptaufgabe ist es, Ihnen durch die Beantwortung Ihrer Fragen zu helfen.",
+          "Ich bin hier, um Informationen zu liefern und Ihnen bei Ihren Fragen zu helfen.",
+          "Ich wurde entwickelt, um Ihnen bei allen Fragen zu helfen, die Sie haben.",
+          "Ich bin ein virtueller Assistent, der bereit ist, Antworten und Unterstützung zu bieten.",
+          "Ich helfe, indem ich Fragen beantworte und Informationen bereitstelle.",
+          "Meine Rolle ist es, Ihnen bei allen Fragen zu helfen, die Sie haben."
+        ]
+      },
+      {
+        "question": "danke",
+        "answer": [
+          "Gern geschehen! Ich bin hier, um zu helfen.",
+          "Freut mich, dass ich helfen konnte! Wenn Sie weitere Fragen haben, lassen Sie es mich wissen.",
+          "Gern geschehen! Wie kann ich Ihnen sonst noch helfen?",
+          "Ich freue mich, dass ich helfen konnte! Wenn Sie weitere Fragen haben, fragen Sie ruhig.",
+          "Es war mir ein Vergnügen! Brauchen Sie noch etwas?",
+          "Gern geschehen! Ich bin hier, wenn Sie etwas brauchen."
+        ]
+      },
+      {
+        "question": "auf wiedersehen",
+        "answer": [
+          "Auf Wiedersehen! Einen schönen Tag noch!",
+          "Bis bald! Passen Sie auf sich auf.",
+          "Tschüss! Kommen Sie wieder, wenn Sie weitere Fragen haben.",
+          "Auf Wiedersehen und passen Sie auf sich auf!",
+          "Danke und auf Wiedersehen!",
+          "Bis später! Kommen Sie zurück, wenn Sie mehr Hilfe brauchen."
+        ]
+      },
+      {
+        "question": "wie ist das wetter heute",
+        "answer": [
+          "Ich bin nicht mit einem Wetterdienst verbunden, aber Sie können die Wetter-App auf Ihrem Telefon überprüfen.",
+          "Ich habe momentan keinen Zugang zum Wetter, aber Sie können diese Informationen online finden.",
+          "Ich kann momentan keine Wettervorhersagen liefern, tut mir leid.",
+          "Ich bin nicht in der Lage, Wettervorhersagen zu geben. Versuchen Sie es auf einer Wetter-Website.",
+          "Entschuldigung, ich kann keine Wetterinformationen geben.",
+          "Ich bin nicht programmiert, Wetter-Updates zu geben. Versuchen Sie es auf einer Wetterseite."
+        ]
+      },
+      {
+        "question": "wie lautet deine telefonnummer",
+        "answer": [
+          "Ich habe keine Telefonnummer, da ich ein Chatbot bin.",
+          "Entschuldigung, ich habe keine Telefonnummer.",
+          "Ich bin ein virtueller Assistent, daher habe ich keine Telefonnummer.",
+          "Als Chatbot habe ich keine Telefonnummer.",
+          "Ich habe keine Telefonnummer, aber ich bin hier, um online zu helfen.",
+          "Ich habe keine Telefonnummer. Ich bin ein Assistenten-Bot."
+        ]
+      },
+      {
+        "question": "kannst du mir bei einem problem helfen",
+        "answer": [
+          "Natürlich! Was scheint das Problem zu sein?",
+          "Selbstverständlich! Bitte erzählen Sie mir, was das Problem ist.",
+          "Ich helfe gerne. Was ist das Problem?",
+          "Ja, ich bin hier, um zu helfen. Wobei brauchen Sie Unterstützung?",
+          "Ich werde mein Bestes tun, um zu helfen. Was ist das Problem?",
+          "Natürlich, ich bin hier, um zu helfen. Können Sie das Problem beschreiben?"
+        ]
+      },
+      {
+        "question": "wer hat dich erschaffen",
+        "answer": [
+          "Ich wurde von Entwicklern erstellt, die mich gebaut haben, um Ihnen zu helfen.",
+          "Ich bin ein Produkt von Programmierern, die mich gebaut haben, um Ihnen zu helfen.",
+          "Ich wurde von einem Team von Entwicklern erstellt, um Ihr virtueller Assistent zu sein.",
+          "Entwickler haben mich erschaffen, um Ihre Fragen zu beantworten.",
+          "Ich wurde von Programmierern gebaut, die einen hilfreichen Assistenten schaffen wollten.",
+          "Ich bin das Ergebnis der harten Arbeit von Entwicklern."
+        ]
+      }
+    ]
+}
+  

@@ -34,33 +34,44 @@
                                 {{ user.username }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                                <li><a class="dropdown-item" href="{% url 'add_post' %}">Add Post</a></li>
-                                <li><a class="dropdown-item" href="{% url 'profil' %}">Profil</a></li>
-                                <li><a class="dropdown-item" href="{% url 'logout_view' %}">Logout</a></li>
+                                <li><a class="dropdown-item" href="{% url 'add_post' %}">{% translate "Add Post" %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'profil' %}">{% translate "Profil" %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'logout_view' %}">{% translate "Logout" %}</a></li>
                             </ul>
                         {% else %}
                             <a class="nav-link dropdown-toggle" href="#" id="accountbar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {% translate "Login" %}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                                <li><a class="dropdown-item" href="{% url 'registration_view' %}">Register</a></li>
-                                <li><a class="dropdown-item" href="{% url 'login_view' %}">Login</a></li>
+                                <li><a class="dropdown-item" href="{% url 'registration_view' %}">{% translate "Register" %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'login_view' %}">{% translate "Login" %}</a></li>
                             </ul>
                         {% endif %} 
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/chatbot">ChatBot</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">{% translate "About" %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/chatbot">{% translate "ChatBot" %}</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">{% translate "Blog" %}</a></li>
                     <!-- Drop-down for language selection with flag icons -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {% translate "Language" %}
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <!--ul class="dropdown-menu" aria-labelledby="languageDropdown">
                             {% for language in languages %}
                             <li><a class="dropdown-item" href="/{{language.code}}"><i class="fas fa-flag"></i>{{ language.name_local }}</a></li>
                             {% endfor %}
+                        </ul-->
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            {% for language in languages %}
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'change_language' language.code %}">
+                                        <i class="fas fa-flag"></i>{{ language.name_local }}
+                                    </a>
+                                </li>
+                            {% endfor %}
                         </ul>
+                        
+                        
                     </li>
                 </ul>
             </div>

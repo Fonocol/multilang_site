@@ -31,17 +31,27 @@ from django.db.models import Q
 # Create your views here.
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
-#def search(request):
-#    """
-#    fonction de recherche de post ce basant sur les titre et le body query est la valeur value du formulaire de recherche
-#    """
-#    query = request.GET.get('value')
-#
-#    results = []
-#    augmented_results = []
-#    if query:
-#        results = Post.published.filter(title__icontains=query) | Post.published.filter(sommary__icontains=query) | Post.published.filter(body__icontains=query)
-#    return (results,augmented_results)
+from django.utils.translation import get_language, activate
+
+def change_language(request, lang_code):
+    # Obtenir l'URL actuelle
+    current_url = request.META.get('HTTP_REFERER', '/')
+    
+    # Obtenir la langue actuelle de l'URL
+    current_lang = get_language()
+    
+    # Remplacer la langue actuelle par la nouvelle langue dans l'URL
+    if current_lang in current_url:
+        new_url = current_url.replace(f'/{current_lang}/', f'/{lang_code}/', 1)
+    else:
+        new_url = f'/{lang_code}{current_url}'
+
+    # Activer la nouvelle langue pour l'utilisateur
+    activate(lang_code)
+    
+    # Rediriger vers la nouvelle URL
+    return redirect(new_url)
+
 
 
 def search(request):
@@ -143,7 +153,7 @@ def getChatbot(request):
     """
     retourne la page chatbotpage.html qui est la page de chatbot
     """
-    premiermessage= """👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖✨"""
+    premiermessage= _("""👋 Hello! I am AlternanceAI. Feel free to ask me any questions or explore our services. If you need help, I'm here for you! 🤖✨""")
     return render(request,'blog/chatbotpage/chatbotpage.html',{'premiermessage':premiermessage})
 
 
@@ -191,12 +201,15 @@ def get_answer(question:str,data:dict):
 
 
 def chatbotlocal(user_input):
-    data: dict = load_data('data.json')
+    #langage du bot
+    current_lang = get_language()
+
+    data: dict = load_data(current_lang+'.json')
     best_match = find_best_match(user_input, [q['question'] for q in data["questions"]])
     if best_match:
         answer: str = get_answer(best_match,data)
     else:
-        answer: str = "Je ne suis pas sûr de comprendre. 🚀 Pouvez-vous me donner plus de détails ou essayer une autre question?"
+        answer: str = _("I'm not sure I understand. 🚀 Could you give me more details or try another question?")
     return answer
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------------------------------------

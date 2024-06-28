@@ -1,0 +1,136 @@
+{
+  "questions": [
+    {
+      "question": "bonjour",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Bonjour ! Besoin d'aide ?"
+      ]
+    },
+    {
+      "question": "bonsoir",
+      "answer": [
+        "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+        "Salut ! En quoi puis-je vous assister ?",
+        "Coucou ! Que puis-je faire pour vous ?",
+        "Hello ! Comment puis-je vous être utile ?",
+        "Hey ! Que puis-je faire pour vous ?",
+        "Bonjour ! Besoin d'aide ?"
+      ]
+    },
+    {
+      "question": "comment ça va",
+      "answer": [
+        "Je vais très bien, merci ! Et vous ?",
+        "Tout va bien ! Comment puis-je vous aider ?",
+        "Je suis toujours prêt à aider ! Que puis-je faire pour vous ?",
+        "Je vais bien, merci ! Comment puis-je vous assister ?",
+        "Je me porte bien, merci de demander ! En quoi puis-je vous aider aujourd'hui ?",
+        "Je vais bien, et vous ? Que puis-je faire pour vous ?"
+      ]
+    },
+    {
+      "question": "quel est ton nom",
+      "answer": [
+        "Je suis un chatbot sans nom spécifique, mais je suis là pour vous aider !",
+        "Je suis votre assistant virtuel. Comment puis-je vous aider ?",
+        "Je n'ai pas de nom propre, mais je suis ici pour répondre à vos questions.",
+        "Je suis simplement votre chatbot. Que puis-je faire pour vous ?",
+        "Je suis un assistant virtuel, prêt à vous aider.",
+        "Vous pouvez m'appeler votre assistant ! Comment puis-je vous aider aujourd'hui ?"
+      ]
+    },
+    {
+      "question": "que fais tu",
+      "answer": [
+        "Je suis ici pour répondre à vos questions et vous assister dans ce dont vous avez besoin.",
+        "Je vous aide avec des informations et des réponses à vos questions.",
+        "Je suis un assistant virtuel, prêt à vous aider avec toutes sortes de questions.",
+        "Je suis là pour vous aider à trouver des réponses et à résoudre des problèmes.",
+        "Je suis ici pour vous fournir des informations et répondre à vos questions.",
+        "Je suis un chatbot conçu pour répondre à vos questions et vous aider."
+      ]
+    },
+    {
+      "question": "quelle est ta fonction",
+      "answer": [
+        "Je suis un chatbot, conçu pour répondre à vos questions et vous fournir des informations.",
+        "Ma fonction principale est de vous assister en répondant à vos questions.",
+        "Je suis ici pour vous aider avec toute information dont vous avez besoin.",
+        "Je suis un assistant virtuel, capable de répondre à vos questions et de vous fournir de l'aide.",
+        "Je suis là pour vous aider en répondant à vos questions et en vous fournissant des informations.",
+        "Ma mission est de vous aider en répondant à vos questions."
+      ]
+    },
+    {
+      "question": "merci",
+      "answer": [
+        "De rien ! Je suis là pour vous aider.",
+        "Avec plaisir ! N'hésitez pas si vous avez d'autres questions.",
+        "Vous êtes les bienvenus ! Comment puis-je vous assister d'autre ?",
+        "C'est un plaisir de vous aider !",
+        "Ravi de pouvoir aider !",
+        "De rien ! Je suis là pour ça."
+      ]
+    },
+    {
+      "question": "au revoir",
+      "answer": [
+        "Au revoir ! Passez une excellente journée !",
+        "À bientôt ! Prenez soin de vous.",
+        "Adieu ! N'hésitez pas à revenir si vous avez d'autres questions.",
+        "Au revoir et à la prochaine !",
+        "Merci et au revoir !",
+        "À bientôt !"
+      ]
+    },
+    {
+      "question": "quel est le temps aujourd'hui",
+      "answer": [
+        "Je ne suis pas connecté à un service météo, mais vous pouvez vérifier sur votre application météo préférée.",
+        "Je n'ai pas accès à la météo actuellement, mais je suis sûr que vous pouvez trouver cette information en ligne.",
+        "Je ne peux pas vous dire la météo pour le moment, désolé.",
+        "Je ne suis pas capable de fournir des informations météo. Essayez une application météo.",
+        "Désolé, je ne peux pas donner des prévisions météo.",
+        "Je ne suis pas programmé pour donner des informations sur la météo. Essayez de vérifier sur un site météo."
+      ]
+    },
+    {
+      "question": "quel est ton numéro de téléphone",
+      "answer": [
+        "Je suis un chatbot, je n'ai pas de numéro de téléphone.",
+        "Désolé, je n'ai pas de numéro de téléphone.",
+        "Je ne possède pas de numéro de téléphone, je suis un assistant virtuel.",
+        "En tant que chatbot, je n'ai pas de numéro de téléphone.",
+        "Je n'ai pas de numéro de téléphone, mais je suis ici pour répondre à vos questions.",
+        "Je n'ai pas de numéro de téléphone à vous donner, je suis un assistant virtuel."
+      ]
+    },
+    {
+      "question": "peux-tu m'aider avec un problème",
+      "answer": [
+        "Bien sûr ! Dites-moi en quoi je peux vous aider.",
+        "Je suis là pour ça ! Quel est le problème ?",
+        "Je serais ravi de vous aider. Quel est votre problème ?",
+        "Oui, je suis là pour vous assister. Expliquez-moi votre problème.",
+        "Je vais essayer de vous aider du mieux que je peux. Quel est le problème ?",
+        "Bien sûr, je suis ici pour vous aider. De quel type de problème s'agit-il ?"
+      ]
+    },
+    {
+      "question": "qui t'a créé",
+      "answer": [
+        "Je suis un produit des développeurs de l'équipe qui m'ont conçu pour vous aider.",
+        "Je suis créé par des programmeurs talentueux pour répondre à vos questions.",
+        "Des développeurs m'ont conçu pour être votre assistant virtuel.",
+        "Je suis le résultat du travail de développeurs qui m'ont programmé pour vous aider.",
+        "Des développeurs ont travaillé dur pour créer un chatbot comme moi.",
+        "Je suis le fruit du travail d'une équipe de développeurs."
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-20 15:27+0200\n"
+"POT-Creation-Date: 2024-06-28 17:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,41 +18,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\main\models.py:18
+#: .\main\models.py:24
 msgid "Draft"
 msgstr "Brouillon"
 
-#: .\main\models.py:19
+#: .\main\models.py:25
 msgid "Published"
 msgstr "Publié"
 
-#: .\main\models.py:21
+#: .\main\models.py:27
 msgid "Title"
 msgstr "Titre"
 
-#: .\main\models.py:23
+#: .\main\models.py:29
+msgid "Sommary"
+msgstr ""
+
+#: .\main\models.py:30
 msgid "Body"
 msgstr "Corps"
 
-#: .\main\models.py:26
+#: .\main\models.py:33
 msgid "Status"
 msgstr "Statut"
 
-#: .\main\models.py:31
+#: .\main\models.py:42
 msgid "Post"
 msgstr "Article"
 
-#: .\main\models.py:32
+#: .\main\models.py:43
 msgid "Posts"
 msgstr "Articles"
-
-#: .\main\templates\blog\header.html:25
-msgid "Apprenticeship"
-msgstr "Alternance"
-
-#: .\main\templates\blog\header.html:37
-msgid "Language"
-msgstr "Langue"
 
 #: .\main\templates\blog\layout\abaout.html:8
 msgid "Who Am I?"
@@ -86,34 +82,78 @@ msgstr "Mon CV"
 msgid "My Journey"
 msgstr "Mon Parcours"
 
+#: .\main\templates\blog\layout\pagination.html:7
+msgid "Previous"
+msgstr "Précédent"
+
+#: .\main\templates\blog\layout\pagination.html:18
+msgid "Next"
+msgstr "Suivant"
+
+#: .\main\templates\blog\layout\profil.html:10
+msgid "User Profile"
+msgstr "Profil Utilisateur"
+
+#: .\main\templates\blog\layout\profil.html:18
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: .\main\templates\blog\layout\profil.html:24
+msgid "First Name"
+msgstr "Prénom"
+
+#: .\main\templates\blog\layout\profil.html:30
+msgid "Last Name"
+msgstr "Nom de famille"
+
+#: .\main\templates\blog\layout\profil.html:36
+msgid "Email Address"
+msgstr "Adresse e-mail"
+
+#: .\main\templates\blog\layout\profil.html:42
+msgid "Password"
+msgstr "Mot de passe"
+
+#: .\main\templates\blog\layout\profil.html:48
+msgid "Edit Profile"
+msgstr "Modifier le profil"
+
+#: .\main\templates\blog\post\addpost.html:9
+msgid "New Post for"
+msgstr "Nouveau post pour"
+
 #: .\main\templates\blog\post\blogs.html:12
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: .\main\templates\blog\post\blogs.html:13
 msgid "Technical Test for Apprenticeship DiotSiaci"
 msgstr "Test Technique pour l'Alternance chez DiotSiaci"
 
-#: .\main\templates\blog\post\blogs.html:31
-#: .\main\templates\blog\post\blogs.html:66
+#: .\main\templates\blog\post\blogs.html:32
+#: .\main\templates\blog\post\blogs.html:67
 #: .\main\templates\blog\post\search.html:19
 msgid "Read more"
 msgstr "Lire la suite"
 
-#: .\main\templates\blog\post\blogs.html:46
+#: .\main\templates\blog\post\blogs.html:47
 msgid "Let me find for you"
 msgstr "Laissez-moi trouver pour vous"
 
-#: .\main\templates\blog\post\blogs.html:57
+#: .\main\templates\blog\post\blogs.html:58
 #: .\main\templates\blog\post\search.html:10
 msgid "Results found for your search"
 msgstr "Résultats trouvés pour votre recherche"
 
-#: .\main\templates\blog\post\blogs.html:72
+#: .\main\templates\blog\post\blogs.html:73
 msgid "See All"
 msgstr "Voir tout"
 
-#: .\main\templates\blog\post\blogs.html:78
+#: .\main\templates\blog\post\blogs.html:79
 msgid "Abaout Us"
 msgstr "À propos de nous"
 
-#: .\main\templates\blog\post\blogs.html:79
+#: .\main\templates\blog\post\blogs.html:80
 msgid ""
 "Fono Colince is currently a third-year computer science student at EILCO and "
 "has been accepted for an apprenticeship at EFREI."
@@ -121,40 +161,99 @@ msgstr ""
 "Fono Colince est actuellement étudiant en informatique en troisième année à "
 "L'EILCO et a été accepté pour une alternance à l'EFREI."
 
-#: .\main\views.py:52
+#: .\main\views.py:111
 msgid "Explorations and Innovations in the Digital World"
 msgstr "Explorations et Innovations dans le Monde Numérique"
 
-#: .\main\views.py:97
+#: .\main\views.py:156
 msgid ""
+"👋 Hello! I am AlternanceAI. Feel free to ask me any questions or explore "
+"our services. If you need help, I'm here for you! 🤖✨"
+msgstr ""
 "👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou "
 "à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖"
 "✨"
-msgstr ""
 
-#: .\multilang_site\settings.py:125
+#: .\main\views.py:209
+msgid ""
+"I'm not sure I understand. 🚀 Could you give me more details or try another "
+"question?"
+msgstr ""
+"Je ne suis pas sûr de comprendre. 🚀 Pouvez-vous me donner plus de "
+"détails ou essayer une autre question?"
+
+#: .\multilang_site\settings.py:127
 msgid "English"
 msgstr "Anglais"
 
-#: .\multilang_site\settings.py:126
+#: .\multilang_site\settings.py:128
 msgid "French"
 msgstr "Français"
 
-#: .\multilang_site\settings.py:127
+#: .\multilang_site\settings.py:129
 msgid "Spanish"
 msgstr "Espagnol"
 
-#: .\multilang_site\settings.py:128
+#: .\multilang_site\settings.py:130
 msgid "Portuguese"
 msgstr "Portugais"
 
-#: .\multilang_site\settings.py:129
+#: .\multilang_site\settings.py:131
 msgid "Italian"
 msgstr "Italien"
 
-#: .\multilang_site\settings.py:130
+#: .\multilang_site\settings.py:132
 msgid "German"
 msgstr "Allemand"
+
+#: .\templates\header.html:25
+msgid "Apprenticeship"
+msgstr "Alternance"
+
+#: .\templates\header.html:37
+#, fuzzy
+#| msgid "Post"
+msgid "Add Post"
+msgstr "Article"
+
+#: .\templates\header.html:38
+msgid "Profil"
+msgstr "Profil"
+
+#: .\templates\header.html:39
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: .\templates\header.html:43 .\templates\header.html:47
+msgid "Login"
+msgstr "Connexion"
+
+#: .\templates\header.html:46
+msgid "Register"
+msgstr "Inscription"
+
+#: .\templates\header.html:51
+msgid "About"
+msgstr "À propos"
+
+#: .\templates\header.html:52
+msgid "ChatBot"
+msgstr "ChatBot"
+
+#: .\templates\header.html:53
+msgid "Blog"
+msgstr "Blog"
+
+#: .\templates\header.html:57
+msgid "Language"
+msgstr "Langue"
+
+#~ msgid ""
+#~ "Je ne suis pas sûr de comprendre. 🚀 Pouvez-vous me donner plus de "
+#~ "détails ou essayer une autre question?"
+#~ msgstr ""
+#~ "Je ne suis pas sûr de comprendre. 🚀 Pouvez-vous me donner plus de "
+#~ "détails ou essayer une autre question?"
 
 #~ msgid "Alternance"
 #~ msgstr "Apprenticeship"

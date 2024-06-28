@@ -1,0 +1,126 @@
+{
+    "questions": [
+      {
+        "question": "olá",
+        "answer": [
+          "Olá! Como posso te ajudar hoje?",
+          "Oi! Em que posso te ajudar?",
+          "Olá! Como posso ser útil para você?",
+          "Oi! O que você precisa?",
+          "E aí! Como posso ajudar?",
+          "Oi! Precisa de ajuda com algo?"
+        ]
+      },
+      {
+        "question": "como você está",
+        "answer": [
+          "Estou bem, obrigado. E você?",
+          "Estou bem! Obrigado por perguntar. Como posso ajudar?",
+          "Tudo bem, obrigado. Como posso ser útil hoje?",
+          "Estou bem, obrigado! Como posso ajudar?",
+          "Estou bem. Precisa de algo?",
+          "Me sinto bem. O que posso fazer por você?"
+        ]
+      },
+      {
+        "question": "qual é o seu nome",
+        "answer": [
+          "Eu sou um chatbot sem nome específico, mas estou aqui para ajudar.",
+          "Você pode me chamar de assistente. Como posso te ajudar?",
+          "Não tenho um nome, mas estou aqui para ajudar.",
+          "Sou um assistente virtual pronto para ajudar. Em que posso ajudar?",
+          "Não tenho um nome, mas estou aqui para ajudar.",
+          "Sou um assistente sem nome. Como posso ajudar hoje?"
+        ]
+      },
+      {
+        "question": "o que você faz",
+        "answer": [
+          "Estou aqui para responder suas perguntas e ajudar no que você precisar.",
+          "Ajudo respondendo perguntas e fornecendo informações.",
+          "Sou um assistente virtual projetado para te ajudar com suas perguntas.",
+          "Estou aqui para fornecer informações e responder suas perguntas.",
+          "Meu trabalho é ajudar com qualquer dúvida que você tenha.",
+          "Estou aqui para oferecer minha ajuda no que você precisar."
+        ]
+      },
+      {
+        "question": "qual é a sua função",
+        "answer": [
+          "Minha função principal é te ajudar respondendo suas perguntas.",
+          "Estou aqui para fornecer informações e ajudar com suas dúvidas.",
+          "Fui criado para te ajudar com qualquer dúvida que você tenha.",
+          "Sou um assistente virtual pronto para oferecer respostas e suporte.",
+          "Ajudo respondendo perguntas e fornecendo informações.",
+          "Meu papel é te ajudar com qualquer dúvida que você tenha."
+        ]
+      },
+      {
+        "question": "obrigado",
+        "answer": [
+          "De nada! Estou aqui para ajudar.",
+          "Fico feliz por ter ajudado. Se tiver mais perguntas, me avise.",
+          "De nada! Como mais posso te ajudar?",
+          "Foi um prazer te ajudar! Se precisar de mais alguma coisa, estou aqui.",
+          "Foi um prazer! Precisa de mais alguma coisa?",
+          "De nada! Estou aqui para qualquer outra coisa que precisar."
+        ]
+      },
+      {
+        "question": "adeus",
+        "answer": [
+          "Adeus! Tenha um bom dia.",
+          "Até logo! Cuide-se.",
+          "Tchau! Volte se tiver mais perguntas.",
+          "Adeus! Cuide-se bem.",
+          "Obrigado e adeus!",
+          "Até breve! Volte quando precisar de mais ajuda."
+        ]
+      },
+      {
+        "question": "como está o tempo hoje",
+        "answer": [
+          "Não tenho acesso ao serviço meteorológico, mas você pode verificar o aplicativo de clima no seu telefone.",
+          "Não posso fornecer a previsão do tempo no momento, mas você pode encontrar essas informações online.",
+          "Desculpe, não posso fornecer a previsão do tempo.",
+          "Não estou configurado para fornecer o clima. Tente consultar um site de previsões meteorológicas.",
+          "Desculpe, não tenho informações sobre o clima.",
+          "Não posso fornecer atualizações meteorológicas, mas você pode procurá-las em um site de clima."
+        ]
+      },
+      {
+        "question": "qual é o seu número de telefone",
+        "answer": [
+          "Não tenho um número de telefone porque sou um chatbot.",
+          "Desculpe, não tenho um número de telefone.",
+          "Sou um assistente virtual, então não tenho número de telefone.",
+          "Como chatbot, não tenho um número de telefone.",
+          "Não tenho um número de telefone, mas estou aqui para te ajudar online.",
+          "Não tenho um número de telefone. Sou um assistente virtual."
+        ]
+      },
+      {
+        "question": "você pode me ajudar com um problema",
+        "answer": [
+          "Claro! Qual é o problema?",
+          "Com certeza! Por favor, me diga qual é o problema.",
+          "Estou aqui para ajudar. Qual é o problema?",
+          "Sim, estou aqui para ajudar. Em que precisa de assistência?",
+          "Vou fazer o meu melhor para ajudar. Qual é o problema?",
+          "Claro, estou aqui para ajudar. Pode descrever o problema?"
+        ]
+      },
+      {
+        "question": "quem te criou",
+        "answer": [
+          "Fui criado por desenvolvedores que me construíram para ajudar.",
+          "Sou produto do trabalho de programadores que me construíram para te ajudar.",
+          "Fui desenvolvido por uma equipe de programadores para ser seu assistente virtual.",
+          "Fui criado por desenvolvedores para responder suas perguntas.",
+          "Sou o resultado do trabalho árduo dos programadores.",
+          "Sou um assistente criado por desenvolvedores para oferecer ajuda."
+        ]
+      }
+    ]
+}
+  

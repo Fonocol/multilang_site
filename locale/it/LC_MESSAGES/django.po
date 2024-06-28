@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-20 15:28+0200\n"
+"POT-Creation-Date: 2024-06-28 17:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,41 +18,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main\models.py:18
+#: .\main\models.py:24
 msgid "Draft"
 msgstr "Bozza"
 
-#: .\main\models.py:19
+#: .\main\models.py:25
 msgid "Published"
 msgstr "Pubblicato"
 
-#: .\main\models.py:21
+#: .\main\models.py:27
 msgid "Title"
 msgstr "Titolo"
 
-#: .\main\models.py:23
+#: .\main\models.py:29
+msgid "Sommary"
+msgstr ""
+
+#: .\main\models.py:30
 msgid "Body"
 msgstr "Corpo"
 
-#: .\main\models.py:26
+#: .\main\models.py:33
 msgid "Status"
 msgstr "Stato"
 
-#: .\main\models.py:31
+#: .\main\models.py:42
 msgid "Post"
 msgstr "Articolo"
 
-#: .\main\models.py:32
+#: .\main\models.py:43
 msgid "Posts"
 msgstr "Articoli"
-
-#: .\main\templates\blog\header.html:25
-msgid "Apprenticeship"
-msgstr "Apprendistato"
-
-#: .\main\templates\blog\header.html:37
-msgid "Language"
-msgstr "Lingua"
 
 #: .\main\templates\blog\layout\abaout.html:8
 msgid "Who Am I?"
@@ -70,9 +66,9 @@ msgid ""
 "Python, Java, C, and R."
 msgstr ""
 "Fono Colince attualmente è uno studente di informatica del terzo anno presso "
-"EILCO ed è stato accettato per un apprendistato presso EFREI. Appassionato di "
-"intelligenza artificiale, scienza dei dati e linguaggi di programmazione come"
-"Python, Java, C e R."
+"EILCO ed è stato accettato per un apprendistato presso EFREI. Appassionato "
+"di intelligenza artificiale, scienza dei dati e linguaggi di programmazione "
+"comePython, Java, C e R."
 
 #: .\main\templates\blog\layout\abaout.html:12
 msgid "Contact Me"
@@ -86,34 +82,78 @@ msgstr "Il mio CV"
 msgid "My Journey"
 msgstr "Il mio Viaggio"
 
+#: .\main\templates\blog\layout\pagination.html:7
+msgid "Previous"
+msgstr "Precedente"
+
+#: .\main\templates\blog\layout\pagination.html:18
+msgid "Next"
+msgstr "Successivo"
+
+#: .\main\templates\blog\layout\profil.html:10
+msgid "User Profile"
+msgstr "Profilo Utente"
+
+#: .\main\templates\blog\layout\profil.html:18
+msgid "Username"
+msgstr "Nome utente"
+
+#: .\main\templates\blog\layout\profil.html:24
+msgid "First Name"
+msgstr "Nome"
+
+#: .\main\templates\blog\layout\profil.html:30
+msgid "Last Name"
+msgstr "Cognome"
+
+#: .\main\templates\blog\layout\profil.html:36
+msgid "Email Address"
+msgstr "Indirizzo email"
+
+#: .\main\templates\blog\layout\profil.html:42
+msgid "Password"
+msgstr "Password"
+
+#: .\main\templates\blog\layout\profil.html:48
+msgid "Edit Profile"
+msgstr "Modifica Profilo"
+
+#: .\main\templates\blog\post\addpost.html:9
+msgid "New Post for"
+msgstr "Nuovo Post per"
+
 #: .\main\templates\blog\post\blogs.html:12
+msgid "Welcome"
+msgstr "Benvenuto"
+
+#: .\main\templates\blog\post\blogs.html:13
 msgid "Technical Test for Apprenticeship DiotSiaci"
 msgstr "Test tecnico per l'apprendistato DiotSiaci"
 
-#: .\main\templates\blog\post\blogs.html:31
-#: .\main\templates\blog\post\blogs.html:66
+#: .\main\templates\blog\post\blogs.html:32
+#: .\main\templates\blog\post\blogs.html:67
 #: .\main\templates\blog\post\search.html:19
 msgid "Read more"
 msgstr "Leggi di più"
 
-#: .\main\templates\blog\post\blogs.html:46
+#: .\main\templates\blog\post\blogs.html:47
 msgid "Let me find for you"
 msgstr "Lascia che io trovi per te"
 
-#: .\main\templates\blog\post\blogs.html:57
+#: .\main\templates\blog\post\blogs.html:58
 #: .\main\templates\blog\post\search.html:10
 msgid "Results found for your search"
 msgstr "Risultati trovati per la tua ricerca"
 
-#: .\main\templates\blog\post\blogs.html:72
+#: .\main\templates\blog\post\blogs.html:73
 msgid "See All"
 msgstr "Vedi tutto"
 
-#: .\main\templates\blog\post\blogs.html:78
+#: .\main\templates\blog\post\blogs.html:79
 msgid "Abaout Us"
 msgstr "Su di noi"
 
-#: .\main\templates\blog\post\blogs.html:79
+#: .\main\templates\blog\post\blogs.html:80
 msgid ""
 "Fono Colince is currently a third-year computer science student at EILCO and "
 "has been accepted for an apprenticeship at EFREI."
@@ -121,40 +161,89 @@ msgstr ""
 "Fono Colince attualmente è uno studente di informatica del terzo anno presso "
 "EILCO ed è stato accettato per un apprendistato presso EFREI."
 
-#: .\main\views.py:52
+#: .\main\views.py:111
 msgid "Explorations and Innovations in the Digital World"
 msgstr "Esplorazioni e innovazioni nel mondo digitale"
 
-#: .\main\views.py:97
+#: .\main\views.py:156
 msgid ""
-"👋 Bonjour! Je suis AlternanceAI. N'hésitez pas à me poser des questions ou "
-"à explorer nos services. Si vous avez besoin d'aide, je suis là pour vous! 🤖"
-"✨"
+"👋 Hello! I am AlternanceAI. Feel free to ask me any questions or explore "
+"our services. If you need help, I'm here for you! 🤖✨"
 msgstr ""
-"👋 Buongiorno! Sono AlternanceAI. Non esitate a farmi domande o "
-"esplorare i nostri servizi. Se avete bisogno di aiuto, sono qui per voi! 🤖"
-"✨"
+"👋 Buongiorno! Sono AlternanceAI. Non esitate a farmi domande o esplorare i "
+"nostri servizi. Se avete bisogno di aiuto, sono qui per voi! 🤖✨"
 
-#: .\multilang_site\settings.py:125
+#: .\main\views.py:209
+msgid ""
+"I'm not sure I understand. 🚀 Could you give me more details or try another "
+"question?"
+msgstr ""
+"Non sono sicuro di capire. 🚀 Potrebbe darmi più dettagli o provare con "
+"un'altra domanda?"
+
+#: .\multilang_site\settings.py:127
 msgid "English"
 msgstr "Inglese"
 
-#: .\multilang_site\settings.py:126
+#: .\multilang_site\settings.py:128
 msgid "French"
 msgstr "Francese"
 
-#: .\multilang_site\settings.py:127
+#: .\multilang_site\settings.py:129
 msgid "Spanish"
 msgstr "Spagnolo"
 
-#: .\multilang_site\settings.py:128
+#: .\multilang_site\settings.py:130
 msgid "Portuguese"
 msgstr "Portoghese"
 
-#: .\multilang_site\settings.py:129
+#: .\multilang_site\settings.py:131
 msgid "Italian"
 msgstr "Italiano"
 
-#: .\multilang_site\settings.py:130
+#: .\multilang_site\settings.py:132
 msgid "German"
 msgstr "Tedesco"
+
+#: .\templates\header.html:25
+msgid "Apprenticeship"
+msgstr "Apprendistato"
+
+#: .\templates\header.html:37
+#, fuzzy
+#| msgid "Post"
+msgid "Add Post"
+msgstr "Articolo"
+
+#: .\templates\header.html:38
+msgid "Profil"
+msgstr "Profilo"
+
+#: .\templates\header.html:39
+msgid "Logout"
+msgstr "Esci"
+
+#: .\templates\header.html:43 .\templates\header.html:47
+msgid "Login"
+msgstr "Accedi"
+
+#: .\templates\header.html:46
+msgid "Register"
+msgstr "Registrati"
+
+#: .\templates\header.html:51
+msgid "About"
+msgstr "Informazioni"
+
+#: .\templates\header.html:52
+msgid "ChatBot"
+msgstr "ChatBot"
+
+#: .\templates\header.html:53
+msgid "Blog"
+msgstr "Blog"
+
+#: .\templates\header.html:57
+msgid "Language"
+msgstr "Lingua"
+
