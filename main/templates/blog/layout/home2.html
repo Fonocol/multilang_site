@@ -6,156 +6,88 @@
     <title>InfoPosts | Fono Colince</title>
 {% load static %}
     <style>
-        /* Reset de base */
+        /* Reset de base pour enlever les marges et le padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif; /* Choix d'une police plus élégante */
         }
 
         /* Style du corps */
         body {
             height: 100vh;
-            background: linear-gradient(120deg, #1e1e2f, #282c34);
-            overflow: hidden;
+            background-color: #282c34;; /* Couleur de fond plus moderne */
+            color: #ffffff; /* Couleur du texte */
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            color: #f8f8f2;
+            align-items: center;
             text-align: center;
-            position: relative;
+            overflow: hidden; /* Pour éviter le scroll */
         }
 
-        /* Conteneur principal */
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 2em;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .logo {
+	.logo {
             width: 100px;
             margin-bottom: 1em;
-            animation: pulse 3s infinite;
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
+        /* Style du conteneur de particules */
+        #particles-js {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0; /* Placer les particules en arrière-plan */
         }
 
+        /* Style du conteneur principal */
+        .container {
+            position: relative;
+            z-index: 1; /* Placer le contenu devant les particules */
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        /* Style du titre */
         h1 {
-            font-size: 3.5em;
+            font-size: 3em;
             margin-bottom: 0.5em;
-            animation: fadeInDown 1.5s ease-in-out;
         }
 
+        /* Style de la description */
         p {
             font-size: 1.2em;
-            margin-bottom: 1.5em;
+            margin-bottom: 1em;
             line-height: 1.5;
-            animation: fadeInUp 2s ease-in-out;
         }
 
-        .cta-button {
+        /* Style du bouton HOME */
+        .homebutton {
             display: inline-block;
-            padding: 12px 25px;
+            padding: 10px 20px;
             font-size: 1.2em;
             color: #282c34;
-            background-color: #61dafb;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            animation: fadeIn 2.5s ease-in-out;
-            text-decoration: none;
-        }
-
-        .cta-button:hover {
             background-color: #ffffff;
-            color: #61dafb;
-        }
-
-        /* Pied de page */
-        footer {
-            width: 100%;
-            padding: 1em 0;
-            background-color: rgba(40, 44, 52, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 2;
-            position: fixed;
-            bottom: 0;
-        }
-
-        .footer-links {
-            margin-bottom: 1em;
-            display: flex;
-            gap: 1em;
-        }
-
-        .footer-links a {
-            color: #61dafb;
+            border-radius: 5px;
             text-decoration: none;
-            font-size: 1.5em;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .footer-links a:hover {
+        .homebutton:hover {
+            background-color: #61dafb;
             color: #ffffff;
         }
 
+        /* Style de la signature */
         .signature {
+            margin-top: 2em;
             font-size: 1em;
             opacity: 0.7;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Design responsive */
+        /* Media queries pour le design responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5em;
@@ -165,60 +97,26 @@
                 font-size: 1em;
             }
 
-            .cta-button {
+            .homebutton {
                 font-size: 1em;
-                padding: 10px 20px;
             }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 0.5em;
-            }
-        }
-
-        /* Arrière-plan des particules */
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, #1e1e2f, #282c34);
-            z-index: 1;
         }
     </style>
-    <!-- Bootstrap Icons CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <!-- Conteneur des particules -->
     <div id="particles-js"></div>
-
-    <!-- Conteneur principal -->
     <div class="container">
-        <img src="{% static 'assets/bot.png' %}" alt="Logo de l'application" class="logo">
-        <h1>InfoPosts</h1>
-        <p>Découvrez InfoPosts, une application innovante créée par Fono Colince dans le cadre d'un test technique pour une alternance chez DiotSiaci.</p>
-        <a href="/home" class="cta-button">Explorez</a>
-    </div>
+	<img src="{% static 'assets/bot.png' %}" alt="Logo de l'application" class="logo">
 
-    <!-- Pied de page -->
-    <footer>
-        <div class="footer-links">
-            <a href="mailto:fonocolince@gmail.com" target="_blank" title="Contact par email">
-                <i class="bi bi-envelope-fill"></i>
-            </a>
-            <a href="https://github.com/Fonocol" target="_blank" title="Mon GitHub">
-                <i class="bi bi-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/fono-colince-b3a111273" target="_blank" title="Mon LinkedIn">
-                <i class="bi bi-linkedin"></i>
-            </a>
-        </div>
+        <h1>InfoPosts</h1>
+        <p>Bienvenue sur InfoPosts, une application conçue par Fono Colince dans le cadre d'un test technique pour une alternance chez DiotSiaci. Explorez les fonctionnalités et découvrez comment elle peut transformer la gestion de l'information.</p>
+        <a class="homebutton" href="/home">HOME</a>
         <div class="signature">
             &copy; 2024 Fono Colince.
         </div>
-    </footer>
+    </div>
+    
 
-    <!-- Inclusion de Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         // Configuration de Particles.js
@@ -270,11 +168,16 @@
                     }
                 },
                 line_linked: {
-                    enable: true,
+                    enable_auto: true,
                     distance: 100,
                     color: '#ffffff',
                     opacity: 0.4,
-                    width: 1
+                    width: 1,
+                    condensed_mode: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 600
+                    }
                 },
                 move: {
                     enable: true,
