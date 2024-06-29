@@ -33,6 +33,10 @@ from django.db.models import Q
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 from django.utils.translation import get_language, activate
 
+def getHome(request):
+    return render(request,'blog/layout/home.html')
+
+
 def change_language(request, lang_code):
     # Obtenir l'URL actuelle
     current_url = request.META.get('HTTP_REFERER', '/')
