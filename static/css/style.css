@@ -487,122 +487,23 @@ header p.lead.mb-0 {
 
 
 
-/* Conteneur principal du nouveaux bot */
-#chatbox-container {
-    max-width: 900px;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
+/* Effet de pulsation au survol pour les boutons */
+
+
+
+
+
+.btn, .bot-icone {
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Zone des messages */
-#chatbox-messages {
-    height: 400px;
-    overflow-y: auto;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-bottom: 2px solid #ddd;
-    display: flex;
-    flex-direction: column;
+.btn:hover, .bot-icone:hover {
+    transform: scale(1.1);
 }
 
-/* Zone d'input utilisateur */
-#chatbox-user-input {
-    display: flex;
-    padding: 10px;
-    background-color: #fff;
-    border-top: 2px solid #ddd;
-}
 
-#chatbox-message-input {
-    flex: 1;
-    padding: 12px;
-    border-radius: 25px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
-    font-size: 16px;
-    transition: border 0.2s ease;
-}
 
-#chatbox-message-input:focus {
-    outline: none;
-    border-color: #007bff;
-}
-
-#chatbox-send-button {
-    margin-left: 10px;
-    padding: 12px 18px;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-#chatbox-send-button:hover {
-    background-color: #0056b3;
-}
-
-/* Style des messages */
-.message-container {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 15px;
-    max-width: 60%;
-    word-wrap: break-word;
-}
-
-.user-message {
-    justify-content: flex-end;
-    align-self: flex-end;
-}
-
-.bot-message {
-    justify-content: flex-start;
-    align-self: flex-start;
-}
-
-/* Textes des messages */
-.message-text {
-    padding: 10px 15px;
-    border-radius: 20px;
-    background-color: #e0f5ff;
-    font-size: 16px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.user-text {
-    background-color: #007bff;
-    color: white;
-}
-
-/* Avatar des utilisateurs et du bot */
-.chat-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 10px;
-    object-fit: cover;
-}
-
-.user-avatar {
-    margin-left: 10px;
-}
-
-.bot-avatar {
-    margin-right: 10px;
-}
-
-/* Animation d'apparition des messages */
-.message-container {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
+/* Effet de fade-in pour les cartes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -614,7 +515,18 @@ header p.lead.mb-0 {
     }
 }
 
+.card, .blog-post {
+    animation: fadeIn 0.6s ease-in-out;
+}
 
 
+/* Amélioration des images avec effet de zoom au survol */
+.image-band img, .hero-image {
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
 
+.image-band img:hover, .hero-image:hover {
+    transform: scale(1.05);
+}
 

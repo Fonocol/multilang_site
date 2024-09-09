@@ -1,0 +1,75 @@
+{% extends "header.html" %}
+
+{% block content %}
+
+{% load static %}
+{% load i18n %}
+<div id="chatbox-container">
+    <div id="chatbox-messages">
+        <div class="message-container bot-message">
+            <div class="message-text">{{ premiermessage }}</div>
+            <img src="{% static 'assets/bot.png' %}" alt="Bot avatar" class="chat-avatar bot-avatar">
+        </div>
+    </div>
+    <div id="chatbox-user-input">
+        <input type="text" id="chatbox-message-input" placeholder="Type your message..." autocomplete="off">
+        <button id="chatbox-send-button"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const messageInput = document.getElementById("chatbox-message-input");
+        const sendButton = document.getElementById("chatbox-send-button");
+        const chatMessages = document.getElementById("chatbox-messages");
+
+        sendButton.addEventListener("click", function() {
+            const message = messageInput.value.trim();
+            if (message !== "") {
+                appendMessage("user", message);
+                sendMessageToServer(message);
+                messageInput.value = "";
+            }
+        });
+
+        function appendMessage(sender, message) {
+            const messageContainer = document.createElement("div");
+            const messageText = document.createElement("div");
+            const profileImage = document.createElement("img");
+
+            if (sender === 'user') {
+                messageContainer.className = "message-container user-message";
+                messageText.className = "message-text user-text";
+                profileImage.src = "{% static 'assets/user.png' %}";
+                profileImage.className = "chat-avatar user-avatar";
+                messageContainer.appendChild(messageText);
+                messageContainer.appendChild(profileImage);
+            } else {
+                messageContainer.className = "message-container bot-message";
+                messageText.className = "message-text bot-text";
+                profileImage.src = "{% static 'assets/bot.png' %}";
+                profileImage.className = "chat-avatar bot-avatar";
+                messageContainer.appendChild(profileImage);
+                messageContainer.appendChild(messageText);
+            }
+
+            messageText.textContent = message;
+            chatMessages.appendChild(messageContainer);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function sendMessageToServer(message) {
+            axios.post('', { message: message })
+            .then(response => {
+                appendMessage("bot", response.data.response);
+            })
+            .catch(error => {
+                appendMessage("bot", "GPT is currently unavailable 🤖");
+                console.error('Error:', error);
+            });
+        }
+    });
+</script>
+
+{% endblock content %}
