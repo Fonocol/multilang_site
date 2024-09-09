@@ -4,29 +4,29 @@
 
 {% load static %}
 {% load i18n %}
-<div id="chat-interface-container">
-    <div id="chat-interface-messages">
-        <div class="messageAndElement-chat-zone">
-            <div class="message-chat-zone">{{premiermessage}}</div>
-            <img src="{% static 'assets/bot.png' %}" alt="" class="bot-avatar">
+<div id="chatbox-container">
+    <div id="chatbox-messages">
+        <div class="message-container bot-message">
+            <div class="message-text">{{ premiermessage }}</div>
+            <img src="{% static 'assets/bot.png' %}" alt="Bot avatar" class="chat-avatar bot-avatar">
         </div>
     </div>
-    <div id="user-chat-input">
-        <input type="text" id="chat-message-input" placeholder="Type your message...">
-        <button id="chat-send-button"><i class="fas fa-paper-plane"></i></button>
+    <div id="chatbox-user-input">
+        <input type="text" id="chatbox-message-input" placeholder="Type your message..." autocomplete="off">
+        <button id="chatbox-send-button"><i class="fas fa-paper-plane"></i></button>
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const messageInput = document.getElementById("chat-message-input");
-        const sendButton = document.getElementById("chat-send-button");
-        const chatMessages = document.getElementById("chat-interface-messages");
+        const messageInput = document.getElementById("chatbox-message-input");
+        const sendButton = document.getElementById("chatbox-send-button");
+        const chatMessages = document.getElementById("chatbox-messages");
 
         sendButton.addEventListener("click", function() {
-            const message = messageInput.value;
-            if (message.trim() !== "") {
+            const message = messageInput.value.trim();
+            if (message !== "") {
                 appendMessage("user", message);
                 sendMessageToServer(message);
                 messageInput.value = "";
@@ -34,29 +34,28 @@
         });
 
         function appendMessage(sender, message) {
-            const messageAndElement = document.createElement("div");
-            const messageElement = document.createElement("div");
+            const messageContainer = document.createElement("div");
+            const messageText = document.createElement("div");
             const profileImage = document.createElement("img");
 
             if (sender === 'user') {
-                messageAndElement.className = "messageAndElement-user-zone";
-                messageElement.className = "message-user-zone";
+                messageContainer.className = "message-container user-message";
+                messageText.className = "message-text user-text";
                 profileImage.src = "{% static 'assets/user.png' %}";
-                profileImage.className = "user-avatar";
-                messageAndElement.appendChild(profileImage);
-                messageAndElement.appendChild(messageElement);
+                profileImage.className = "chat-avatar user-avatar";
+                messageContainer.appendChild(messageText);
+                messageContainer.appendChild(profileImage);
             } else {
-                messageAndElement.className = "messageAndElement-chat-zone";
-                messageElement.className = "message-chat-zone";
+                messageContainer.className = "message-container bot-message";
+                messageText.className = "message-text bot-text";
                 profileImage.src = "{% static 'assets/bot.png' %}";
-                profileImage.className = "bot-avatar";
-                messageAndElement.appendChild(messageElement);
-                messageAndElement.appendChild(profileImage);
+                profileImage.className = "chat-avatar bot-avatar";
+                messageContainer.appendChild(profileImage);
+                messageContainer.appendChild(messageText);
             }
 
-            messageElement.classList.add("message", sender);
-            messageElement.textContent = message;
-            chatMessages.appendChild(messageAndElement);
+            messageText.textContent = message;
+            chatMessages.appendChild(messageContainer);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
