@@ -1,34 +1,28 @@
-
 {% extends "header.html" %}
-
 
 {% block content %}
 
-
 {% load static %}
 {% load i18n %}
-<div id="chat-container">
-    <div id="chat-messages">
-        <div class="messageAndElement-zonechat">
-            <div class="message-zonechat">{{premiermessage}}
-            </div>
-            <img src="{% static 'assets/bot.png' %}" alt="" class="bot-image">
+<div id="chat-interface-container">
+    <div id="chat-interface-messages">
+        <div class="messageAndElement-chat-zone">
+            <div class="message-chat-zone">{{premiermessage}}</div>
+            <img src="{% static 'assets/bot.png' %}" alt="" class="bot-avatar">
         </div>
     </div>
-    <div id="user-input">
-        <input type="text" id="message-input" placeholder="Type here...">
-        <button id="send-button"><i class="fas fa-paper-plane"></i></button> <!-- Icône d'envoi -->
+    <div id="user-chat-input">
+        <input type="text" id="chat-message-input" placeholder="Type your message...">
+        <button id="chat-send-button"><i class="fas fa-paper-plane"></i></button>
     </div>
 </div>
 
-
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
-    
     document.addEventListener("DOMContentLoaded", function() {
-        const messageInput = document.getElementById("message-input");
-        const sendButton = document.getElementById("send-button");
-        const chatMessages = document.getElementById("chat-messages");
+        const messageInput = document.getElementById("chat-message-input");
+        const sendButton = document.getElementById("chat-send-button");
+        const chatMessages = document.getElementById("chat-interface-messages");
 
         sendButton.addEventListener("click", function() {
             const message = messageInput.value;
@@ -45,68 +39,38 @@
             const profileImage = document.createElement("img");
 
             if (sender === 'user') {
-                messageAndElement.className = "messageAndElement-zoneuser";
-                messageElement.className = "message-zoneuser";
-                profileImage.src = "{% static 'assets/bot.png' %}";
-                profileImage.className = "bot-image";
-                // Ajouter l'image du profil et le message en paralele
+                messageAndElement.className = "messageAndElement-user-zone";
+                messageElement.className = "message-user-zone";
+                profileImage.src = "{% static 'assets/user.png' %}";
+                profileImage.className = "user-avatar";
                 messageAndElement.appendChild(profileImage);
                 messageAndElement.appendChild(messageElement);
             } else {
-                messageAndElement.className = "messageAndElement-zonechat";
-                messageElement.className = "message-zonechat";
+                messageAndElement.className = "messageAndElement-chat-zone";
+                messageElement.className = "message-chat-zone";
                 profileImage.src = "{% static 'assets/bot.png' %}";
-                profileImage.className = "bot-image";
-                // Ajouter l'image du profil et le message en paralele
+                profileImage.className = "bot-avatar";
                 messageAndElement.appendChild(messageElement);
                 messageAndElement.appendChild(profileImage);
-                
             }
 
-            // Ajouter la classe 'message' et le contenu du message
             messageElement.classList.add("message", sender);
             messageElement.textContent = message;
-
-            
-
-            // Ajouter le message à la zone de chat
             chatMessages.appendChild(messageAndElement);
-            chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll down to show latest message
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
-
 
         function sendMessageToServer(message) {
             axios.post('', { message: message })
             .then(response => {
-                // Gérer la réponse du serveur ici
-                console.log(response.data.response);
                 appendMessage("bot", response.data.response);
             })
             .catch(error => {
-                appendMessage("bot", "GPT est indisponible pour repondre actullement 🤖");
-                console.error('Error sending message to server:', error);
+                appendMessage("bot", "GPT is currently unavailable 🤖");
+                console.error('Error:', error);
             });
         }
-        });
+    });
 </script>
 
-
 {% endblock content %}
-
-
-
-
-
-<!--a href="/">&larr; Back</a>
-<div class="admin-title">
-    <h2>ChatBot</h2>
-</div>
-
-<div class="container">
-    <form action="/chatbot" method="POST">
-        <label for="title"><b>Message</b></label>
-        <input type="text" placeholder="tape here" name="message">
-    
-        <input type="submit" value="Add" class="btn">
-    </form>
-</div-->
