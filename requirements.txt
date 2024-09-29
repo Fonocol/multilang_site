@@ -56,10 +56,8 @@ ipykernel==6.29.5
 ipython==8.26.0
 jedi==0.19.1
 Jinja2==3.1.4
-joblib==1.1.1
 jupyter_client==8.6.2
 jupyter_core==5.7.2
-keras==3.3.3
 kiwisolver==1.4.5
 langcodes==3.4.0
 language_data==1.2.0
@@ -82,17 +80,13 @@ mypy-extensions==1.0.0
 namex==0.0.8
 nest-asyncio==1.6.0
 networkx==3.3
-nltk==3.8.1
 numpy==1.26.4
-ollama==0.2.1
 openai==1.34.0
 opt-einsum==3.3.0
 optree==0.11.0
 packaging==24.1
 pandas==2.2.2
-pandas-profiling==3.2.0
 parso==0.8.4
-phik==0.12.4
 pillow==10.3.0
 platformdirs==4.2.2
 pluggy==1.5.0
@@ -119,7 +113,6 @@ requests==2.32.3
 rich==13.7.1
 sacremoses==0.1.1
 safetensors==0.4.5
-scikit-learn==1.5.1
 scipy==1.14.0
 seaborn==0.13.2
 sentencepiece==0.2.0
