@@ -59,7 +59,7 @@ class Post(models.Model):
 
 
 
-#Django@2002.com
+#Django@2002.com ++++ Fono++++ eilco@cm
 #Fono2002.com
 #venv\Scripts\activate.bat
 

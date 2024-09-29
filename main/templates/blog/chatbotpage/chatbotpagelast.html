@@ -4,69 +4,141 @@
 
 {% load static %}
 {% load i18n %}
-<div id="chatbox-container">
-    <div id="chatbox-messages">
-        <div class="message-container bot-message">
-            <div class="message-text">{{ premiermessage }}</div>
-            <img src="{% static 'assets/bot.png' %}" alt="Bot avatar" class="chat-avatar bot-avatar">
+<link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+
+<div id="chat-container">
+    <div id="chat-messages">
+        <div class="messageAndElement-zonechat">
+            <div class="message-zonechat">{{ premiermessage }}</div>
+            <img src="{% static 'assets/bot.png' %}" alt="" class="bot-image">
         </div>
     </div>
-    <div id="chatbox-user-input">
-        <input type="text" id="chatbox-message-input" placeholder="Type your message..." autocomplete="off">
-        <button id="chatbox-send-button"><i class="fas fa-paper-plane"></i></button>
+    <div id="user-input">
+        <input type="text" id="message-input" placeholder="Tapez votre message...">
+        <button id="send-button"><i class="fas fa-paper-plane"></i></button> <!-- Icône d'envoi -->
+        <input type="file" id="image-input" accept="image/*" style="display: none;">
+        <button id="upload-button"><i class="fas fa-image"></i></button> <!-- Icône de téléchargement -->
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const messageInput = document.getElementById("chatbox-message-input");
-        const sendButton = document.getElementById("chatbox-send-button");
-        const chatMessages = document.getElementById("chatbox-messages");
+        const messageInput = document.getElementById("message-input");
+        const sendButton = document.getElementById("send-button");
+        const uploadButton = document.getElementById("upload-button");
+        const imageInput = document.getElementById("image-input");
+        const chatMessages = document.getElementById("chat-messages");
 
         sendButton.addEventListener("click", function() {
-            const message = messageInput.value.trim();
-            if (message !== "") {
+            const message = messageInput.value;
+            if (message.trim() !== "") {
                 appendMessage("user", message);
-                sendMessageToServer(message);
+                sendMessageToServer({ type: 'text', content: message });
                 messageInput.value = "";
             }
         });
 
+        uploadButton.addEventListener("click", function() {
+            imageInput.click();
+        });
+
+        imageInput.addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageData = e.target.result;
+                    appendImage("user", imageData);
+                    sendMessageToServer({ type: 'image', content: file });
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
         function appendMessage(sender, message) {
-            const messageContainer = document.createElement("div");
-            const messageText = document.createElement("div");
+            const messageAndElement = document.createElement("div");
+            const messageElement = document.createElement("div");
             const profileImage = document.createElement("img");
 
             if (sender === 'user') {
-                messageContainer.className = "message-container user-message";
-                messageText.className = "message-text user-text";
-                profileImage.src = "{% static 'assets/user.png' %}";
-                profileImage.className = "chat-avatar user-avatar";
-                messageContainer.appendChild(messageText);
-                messageContainer.appendChild(profileImage);
+                messageAndElement.className = "messageAndElement-zoneuser";
+                messageElement.className = "message-zoneuser";
+                profileImage.src = "{% static 'assets/user.jpeg' %}"; <!-- Assurez-vous d'avoir une image utilisateur -->
+                profileImage.className = "bot-image";
+                messageAndElement.appendChild(profileImage);
+                messageAndElement.appendChild(messageElement);
             } else {
-                messageContainer.className = "message-container bot-message";
-                messageText.className = "message-text bot-text";
+                messageAndElement.className = "messageAndElement-zonechat";
+                messageElement.className = "message-zonechat";
                 profileImage.src = "{% static 'assets/bot.png' %}";
-                profileImage.className = "chat-avatar bot-avatar";
-                messageContainer.appendChild(profileImage);
-                messageContainer.appendChild(messageText);
+                profileImage.className = "bot-image";
+                messageAndElement.appendChild(messageElement);
+                messageAndElement.appendChild(profileImage);
             }
 
-            messageText.textContent = message;
-            chatMessages.appendChild(messageContainer);
+            messageElement.classList.add("message", sender);
+            messageElement.textContent = message;
+
+            chatMessages.appendChild(messageAndElement);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
-        function sendMessageToServer(message) {
-            axios.post('', { message: message })
+        function appendImage(sender, imageData) {
+            const messageAndElement = document.createElement("div");
+            const imageElement = document.createElement("img");
+            const profileImage = document.createElement("img");
+
+            if (sender === 'user') {
+                messageAndElement.className = "messageAndElement-zoneuser";
+                imageElement.className = "message-imageuser";
+                profileImage.src = "{% static 'assets/user.jpeg' %}"; <!-- Assurez-vous d'avoir une image utilisateur -->
+                profileImage.className = "bot-image";
+                messageAndElement.appendChild(profileImage);
+                messageAndElement.appendChild(imageElement);
+            } else {
+                messageAndElement.className = "messageAndElement-zonechat";
+                imageElement.className = "message-imagechat";
+                profileImage.src = "{% static 'assets/bot.png' %}";
+                profileImage.className = "bot-image";
+                messageAndElement.appendChild(imageElement);
+                messageAndElement.appendChild(profileImage);
+            }
+
+            imageElement.src = imageData;
+            chatMessages.appendChild(messageAndElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function sendMessageToServer(data) {
+            const formData = new FormData();
+            if (data.type === 'text') {
+                formData.append('message', data.content);
+                formData.append('type', 'text');
+            } else if (data.type === 'image') {
+                formData.append('image', data.content);
+                formData.append('type', 'image');
+            }
+
+            axios.post('', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
             .then(response => {
-                appendMessage("bot", response.data.response);
+                if (data.type === 'text') {
+                    appendMessage("bot", response.data.response);
+                } else if (data.type === 'image') {
+                    appendMessage("bot", response.data.description);
+                }
             })
             .catch(error => {
-                appendMessage("bot", "GPT is currently unavailable 🤖");
-                console.error('Error:', error);
+                if (data.type === 'text') {
+                    appendMessage("bot", "GPT est indisponible pour répondre actuellement 🤖");
+                } else if (data.type === 'image') {
+                    appendMessage("bot", "Je ne peux pas décrire cette image pour le moment.");
+                }
+                console.error('Erreur en envoyant le message au serveur:', error);
             });
         }
     });

@@ -286,6 +286,22 @@ header p.lead.mb-0 {
 }
 
 
+#send-button, #upload-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-button:hover, #upload-button:hover {
+    background-color: #45a049;
+}
+
+
 .messageAndElement-zoneuser {
     display: flex;
     /*align-items: center;*/

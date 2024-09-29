@@ -3,6 +3,12 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.translation import gettext as _  #pour la traduction
 from .models import Post
 from main.forms import PostForm
+
+from transformers import pipeline
+from PIL import Image
+import os
+from django.conf import settings
+
 from django.core.paginator import (
     Paginator,
     EmptyPage,
@@ -27,6 +33,22 @@ from difflib import get_close_matches
 import random
 
 from django.db.models import Q
+
+
+
+import logging
+
+# Configurer le logger
+logger = logging.getLogger(__name__)
+
+# Charger les pipelines une seule fois au démarrage
+try:
+    pipeline_legende_image = pipeline("image-to-text", model="Salesforce/blip-image-captioning-large")
+    pipeline_traduction = pipeline("translation", model="Helsinki-NLP/opus-mt-en-fr")
+except Exception as e:
+    pipeline_legende_image = None
+    pipeline_traduction = None
+    logger.error(f"Erreur lors du chargement des pipelines : {e}")
 
 # Create your views here.
 
@@ -152,13 +174,35 @@ def getAbaoutpage(request):
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------------------------------------
+def generer_legende_en_francais(image_path):
+    """
+    Génère une légende pour une image donnée en anglais et la traduit en français.
+
+    :param image_path: Le chemin vers l'image pour laquelle générer une légende.
+    :type image_path: str
+    :return: La légende traduite en français.
+    :rtype: str
+    """
+    # Ouvrir l'image
+    image = Image.open(image_path).convert('RGB')
+
+    # Génération de la légende en anglais
+    resultats_legende = pipeline_legende_image(image)
+    legende_anglaise = resultats_legende[0]['generated_text']
+
+    # Traduction de la légende en français
+    legende_francaise = pipeline_traduction(legende_anglaise, max_length=512)
+    texte_francais = legende_francaise[0]['translation_text']
+
+    return texte_francais
+
 
 def getChatbot(request):
     """
     retourne la page chatbotpage.html qui est la page de chatbot
     """
     premiermessage= _("""👋 Hello! I am AlternanceAI. Feel free to ask me any questions or explore our services. If you need help, I'm here for you! 🤖✨""")
-    return render(request,'blog/chatbotpage/chatbotpage.html',{'premiermessage':premiermessage})
+    return render(request,'blog/chatbotpage/chatbotpagelast.html',{'premiermessage':premiermessage})
 
 
 def getGPTResponse(query):
@@ -225,9 +269,7 @@ def chatbot_response(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         user_message = data.get('message')
-        
-        # Réponse automatique du bot
-        # Ajouter un API key pour GPT
+
         #bot_response = getGPTResponse(user_message)#"Salut, je suis indisponible pour repondre :-)"
         #bot_response = ollameResponse(user_message)
         bot_response = chatbotlocal(user_message)
@@ -240,7 +282,54 @@ def chatbot_response(request):
         return getChatbot(request)
     else:
         return HttpResponse(status=405)
-    
+
+
+@csrf_exempt 
+def chatbot_view(request):
+    if request.method == 'POST':
+        message_type = request.POST.get('type')
+
+        if message_type == 'text':
+            user_message = request.POST.get('message', '')
+            # Intégrer votre logique de traitement de texte avec GPT ici
+            bot_response = chatbotlocal(user_message)
+            return JsonResponse({'response': bot_response})
+
+        elif message_type == 'image':
+            image_file = request.FILES.get('image')
+            if image_file:
+                try:
+                    # Sauvegarder temporairement l'image
+                    image_path = os.path.join(settings.MEDIA_ROOT, 'uploaded_images', image_file.name)
+                    os.makedirs(os.path.dirname(image_path), exist_ok=True)
+                    with open(image_path, 'wb+') as destination:
+                        for chunk in image_file.chunks():
+                            destination.write(chunk)
+
+                    if pipeline_legende_image and pipeline_traduction:
+                        # Générer la légende en français
+                        legende = generer_legende_en_francais(image_path)
+                    else:
+                        legende = "Les services de génération de légende ne sont pas disponibles."
+
+                except Exception as e:
+                    logger.error(f"Erreur lors du traitement de l'image : {e}")
+                    legende = "Je n'ai pas pu générer une description pour cette image."
+
+                finally:
+                    # Supprimer l'image après traitement si souhaité
+                    if os.path.exists(image_path):
+                        os.remove(image_path)
+
+                return JsonResponse({'description': legende})
+            else:
+                return JsonResponse({'description': "Aucune image téléchargée."})
+
+    # Pour les requêtes GET, rendre le template
+    return getChatbot(request)
+
+
+
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 
