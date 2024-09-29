@@ -34,22 +34,6 @@ import random
 
 from django.db.models import Q
 
-
-
-import logging
-
-# Configurer le logger
-logger = logging.getLogger(__name__)
-
-# Charger les pipelines une seule fois au démarrage
-try:
-    pipeline_legende_image = pipeline("image-to-text", model="Salesforce/blip-image-captioning-large")
-    pipeline_traduction = pipeline("translation", model="Helsinki-NLP/opus-mt-en-fr")
-except Exception as e:
-    pipeline_legende_image = None
-    pipeline_traduction = None
-    logger.error(f"Erreur lors du chargement des pipelines : {e}")
-
 # Create your views here.
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -183,9 +167,15 @@ def generer_legende_en_francais(image_path):
     :return: La légende traduite en français.
     :rtype: str
     """
+    # Initialiser la pipeline de légendage d'image
+    pipeline_legende_image = pipeline("image-to-text", model="Salesforce/blip-image-captioning-large")
+
+    # Initialiser la pipeline de traduction de l'anglais vers le français
+    pipeline_traduction = pipeline("translation", model="Helsinki-NLP/opus-mt-en-fr")
+    
     # Ouvrir l'image
     image = Image.open(image_path).convert('RGB')
-
+    
     # Génération de la légende en anglais
     resultats_legende = pipeline_legende_image(image)
     legende_anglaise = resultats_legende[0]['generated_text']
@@ -288,46 +278,36 @@ def chatbot_response(request):
 def chatbot_view(request):
     if request.method == 'POST':
         message_type = request.POST.get('type')
-
+        
         if message_type == 'text':
             user_message = request.POST.get('message', '')
-            # Intégrer votre logique de traitement de texte avec GPT ici
+            # Ici, vous pouvez intégrer votre logique de traitement de texte avec GPT
+            # Pour l'exemple, nous renvoyons une réponse statique
             bot_response = chatbotlocal(user_message)
             return JsonResponse({'response': bot_response})
-
+        
         elif message_type == 'image':
             image_file = request.FILES.get('image')
             if image_file:
-                try:
-                    # Sauvegarder temporairement l'image
-                    image_path = os.path.join(settings.MEDIA_ROOT, 'uploaded_images', image_file.name)
-                    os.makedirs(os.path.dirname(image_path), exist_ok=True)
-                    with open(image_path, 'wb+') as destination:
-                        for chunk in image_file.chunks():
-                            destination.write(chunk)
-
-                    if pipeline_legende_image and pipeline_traduction:
-                        # Générer la légende en français
-                        legende = generer_legende_en_francais(image_path)
-                    else:
-                        legende = "Les services de génération de légende ne sont pas disponibles."
-
-                except Exception as e:
-                    logger.error(f"Erreur lors du traitement de l'image : {e}")
-                    legende = "Je n'ai pas pu générer une description pour cette image."
-
-                finally:
-                    # Supprimer l'image après traitement si souhaité
-                    if os.path.exists(image_path):
-                        os.remove(image_path)
-
+                # Sauvegarder temporairement l'image
+                image_path = os.path.join(settings.MEDIA_ROOT, 'uploaded_images', image_file.name)
+                os.makedirs(os.path.dirname(image_path), exist_ok=True)
+                with open(image_path, 'wb+') as destination:
+                    for chunk in image_file.chunks():
+                        destination.write(chunk)
+                
+                # Générer la légende en français
+                legende = generer_legende_en_francais(image_path)
+                
+                # Supprimer l'image après traitement si souhaité
+                os.remove(image_path)
+                
                 return JsonResponse({'description': legende})
             else:
                 return JsonResponse({'description': "Aucune image téléchargée."})
-
+    
     # Pour les requêtes GET, rendre le template
     return getChatbot(request)
-
 
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------
